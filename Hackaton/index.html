@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    
+</head>
+<body>
+    <div class="progress">
+      <div id="progress" class="progress-bar" role="progressbar" aria-valuenow="70"
+      aria-valuemin="0" aria-valuemax="9" style="width:0%">
+        0
+      </div>
+    </div>
+   <div id="question">
+       
+   </div>
+   <button id="next" class="btn btn-primary">Next</button>
+    <script>
+    $(document).ready(function(){
+        let indice = 1;
+        let total = 9;
+        getQuestion();
+        function getQuestion(){
+            $.ajax({
+                url: 'question'+indice+".html",
+                datatype: "html",
+                success: function(data){
+                    $("#question").html(data);
+                }
+            });
+        }
+        
+        
+        $("#next").on("click", function(){
+            let value = (indice) * 100/9 + "%";
+            $("#progress").css("width", value ).html(indice+ "/9");
+            indice++;
+
+            getQuestion();
+        });
+    });
+    </script>
+</body>
+</html>

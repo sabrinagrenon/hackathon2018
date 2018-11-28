@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            var answers = "Paris";
+ 
+            function checkAnswers() {
+                userAnswers = document.myForm.quOne.value;
+                
+                if(userAnswers == answers) {
+
+                    monDiv.innerHTML ="Bien joué! La réponse est correcte!";
+                } 
+                else{
+                    monDiv.innerHTML = "La bonne réponse est " + answers;
+                }
+            }
+  
+        </script>
+    </head>
+
+    <body>
+
+        <form name="myForm">
+            What is the capital of France? <input type="text" name="quOne">
+        
+            <button type="button" onclick="checkAnswers()">Check your answers</button>
+        </form>
+
+        <div id="monDiv"></div>
+
+
+    </body>
+</html>
