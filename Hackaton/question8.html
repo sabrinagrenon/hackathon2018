@@ -1,0 +1,105 @@
+
+
+    <script>
+        $(document).ready(function() {
+             
+           
+            $('#contenant div').draggable();
+
+            let elem = null;
+            //    $('.element').
+            //    
+            $('#targettrue').droppable({
+                drop: function(event, ui) {
+                    elem = $(this);
+                    $(this)
+                        .addClass('ui-state-highlight')
+                        .css('background-color', $(ui.draggable).hasClass('trueElem') ? '#1cbc5a' : '#fc0000')
+                    $(ui.draggable).css('display', 'none');
+
+                }
+            });
+
+            $('#targetfalse').droppable({
+                drop: function(event, ui) {
+                    elem = $(this);
+                    $(this)
+                        .addClass('ui-state-hightlight')
+                        .css('background-color', $(ui.draggable).hasClass('falseElem') ? '#1cbc5a' : '#fc0000')
+                    $(ui.draggable).css('display', 'none');
+                }
+            });
+
+            $('#cibles').on('mouseout', function() {
+                elem.css('background-color', '#bfbfbf');
+
+            })
+        });
+
+    </script>
+    <style>
+        #contenant {
+            width: 100%;
+            height: 50vh;
+        }
+
+        #contenant>div {
+            width: 100px;
+            height: 100px;
+            background-color: #e4beff;
+        }
+
+        #cibles {
+            height: 800px;
+            width: 800px;
+            display: inline-flex;
+            justify-content: flex-end;
+
+        }
+
+        #targettrue {
+            width: 150px;
+            height: 150px;
+            background-color: #bfbfbf;
+            margin: 50px;
+        }
+
+        #targetfalse {
+            width: 150px;
+            height: 150px;
+            background-color: #bfbfbf;
+            margin: 50px;
+        }
+
+    </style>
+
+
+    <h1>jQuery - Drag and drop</h1>
+
+    <div id="contenant">
+        <div id="elem1" class="trueElem element">
+            <p>True AND True</p>
+        </div>
+        <div id="elem2" class="trueElem element">
+            <p>True OR True</p>
+        </div>
+        <div id="elem3" class="falseElem element">
+            <p>!True AND False</p>
+        </div>
+        <div id="elem4" class="falseElem element">
+            <p>!False OR False</p>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="cibles">
+        <div id="targettrue" class="ui-widget-header">True
+        </div>
+        <div id="targetfalse" class="ui-widget-header">False
+        </div>
+
+    </div>
+
