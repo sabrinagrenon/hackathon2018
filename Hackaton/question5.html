@@ -12,6 +12,7 @@
         $('#targettrue').droppable({
             drop: function(event, ui) {
                 elem = $(this);
+                $('#adaImg').attr('src','./images/ada-contente.svg'); 
                 $(this)
                     .addClass('ui-state-highlight')
                     .css('border', $(ui.draggable).hasClass('trueElem') ? '1px solid #2ecc71' : '1px solid #d91e50')
@@ -23,6 +24,7 @@
         $('#targetfalse').droppable({
             drop: function(event, ui) {
                 elem = $(this);
+                $('#adaImg').attr('src','./images/ada-triste.svg'); 
                 $(this)
                     .addClass('ui-state-hightlight')
                     .css('border', $(ui.draggable).hasClass('falseElem') ? '1px solid #2ecc71' : '1px solid #d91e50')

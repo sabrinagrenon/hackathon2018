@@ -11,6 +11,7 @@
             $(e.target).removeClass('grabbed');
         }).draggable({
             revert: true,
+            
         });
 
 
@@ -19,6 +20,7 @@
             drop: (e, ui) => {
                 let target = e.target;
                 if (target.id == ui.draggable.attr('drop-target')) {
+                    $('#adaImg').attr('src','./images/ada-contente.svg'); 
                     ui.draggable.css({
                         'top': 0,
                         'left': 0
@@ -26,6 +28,10 @@
                     $(target).css('border-color', 'green');
                     $(target).html(ui.draggable);
                 }
+                else {
+                    $('#adaImg').attr('src','./images/ada-triste.svg'); 
+                }
+                
             }
 
         });
