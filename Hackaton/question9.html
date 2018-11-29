@@ -5,48 +5,55 @@
         <title>Document</title>
         <script type="text/javascript">
             var answers = "attributs";
- 
+
             function checkAnswers() {
                 userAnswers = document.myForm.quOne.value;
-                
-            
-                
-                 if(userAnswers == answers) {
-                $('#monDiv').css("border", "1px solid #2ecc71");
-                $('#monDiv').html ("Bien joué! La réponse est correcte!");
-                $('#monDiv').css("padding", "10px");
-                $('#monDiv').css("margin-bottom", "50px");
-                $('#monDiv').css("color", "#fff");
 
-                
+
+
+                if(userAnswers == answers) {
+                    $('#monDiv').css("border", "1px solid #2ecc71");
+                    $('#monDiv').html ("Bien joué! La réponse est correcte!");
+                    $('#monDiv').css("padding", "10px");
+                    $('#monDiv').css("margin-bottom", "50px");
+                    $('#monDiv').css("color", "#fff");
+
+
                 } 
                 else{
-                 $('#monDiv').css("border", "1px solid #d91e50");
-                 $('#monDiv').css("padding", "10px");
-                 $('#monDiv').css("margin-bottom", "50px");
-                 $('#monDiv').css("color", "#fff");
-                 $('#monDiv').html("Dommage ... la bonne réponse est " + answers)
+                    $('#monDiv').css("border", "1px solid #d91e50");
+                    $('#monDiv').css("padding", "10px");
+                    $('#monDiv').css("margin-bottom", "50px");
+                    $('#monDiv').css("color", "#fff");
+                    $('#monDiv').html("Dommage ... la bonne réponse est " + answers)
                 }
             }
-  
+
         </script>
     </head>
 
     <body>
-      <div class="theorie">
-        <p>
-          En programmation orientée objets, une classe possède un ensemble d’attributs qui lui sont propres. Prenons par exemple les attributs « Tigres » et « Lions». Ils vont appartenir à une classe nommée « Félins ». Une classe peut être l’attribut d’une autre classe ! Dans notre exemple, la classe «Félins » peut être attribut d’une classe appelée « Carnivores ».
+        <div class="theorie">
+            <p>
+                En programmation orientée objets, une classe possède un ensemble d’attributs qui lui sont propres. Prenons par exemple les attributs « Tigres » et « Lions». Ils vont appartenir à une classe nommée « Félins ». Une classe peut être l’attribut d’une autre classe ! Dans notre exemple, la classe «Félins » peut être attribut d’une classe appelée « Carnivores ».
 
-        </p>
-    </div>
-       
+            </p>
+        </div>
+
         <h3 id="q">Question</h3>
+        <div id="grosDiv">
 
-        <form name="myForm">
-            Une classe possède un ou plusieurs<input type="text" name="quOne">
-        
-            <button type="button" onclick="checkAnswers()">Ok</button>
-        </form>
+
+            <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+
+
+
+            <form name="myForm">
+                Une classe possède un ou plusieurs<input type="text" name="quOne">
+
+                <button type="button" onclick="checkAnswers()">Ok</button>
+            </form>
+        </div>
 
         <div id="monDiv"></div>
 

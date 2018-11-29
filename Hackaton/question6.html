@@ -1,97 +1,106 @@
 
 
 
-        <!--<div class="quiz-header"></div>-->
-       
-        <div class="theorie">
-            <p>
+<!--<div class="quiz-header"></div>-->
+
+<div class="theorie">
+    <p>
         Théorie: Les structures conditionnelles<br>
         La structure conditionnelle est un concept essentiel en programmation. Grâce à lui, nous allons pouvoir exécuter l'une ou l'autre instruction selon le cas qui se présente à nous. Les conditions simples s'écrivent avec les mots anglais « if » et « else », qui signifient respectivement « si » et « sinon ». En français, cela donne : 
         Si « telle condition » est vraie, alors on exécute « telle instruction » . Sinon, on exécute « telle autre instruction »
-            </p>
-        </div>
-        
-       
+    </p>
+</div>
 
-        <div id="multichoix">
-            <h3 id="q">Si monAge vaut 18 ans, quel est le résultat du bout de code ci-dessous :<br>
 
-if (monAge >= 18){<br>
-	print(« Bienvenue en boîte, tu es majeur.e ! ») ;
-}<br>
-Else {<br>
-	Print(« Tu es mineur.e, brosse-toi les dents et au lit ! ») ;
-}
+
+<h3 id="q">Si monAge vaut 18 ans, quel est le résultat du bout de code ci-dessous :<br>
+
+    if (monAge >= 18){<br>
+    print(« Bienvenue en boîte, tu es majeur.e ! ») ;
+    }<br>
+    Else {<br>
+    Print(« Tu es mineur.e, brosse-toi les dents et au lit ! ») ;
+    }
 </h3>
-            <a>
-                <span id="a" class="letter"> Hello World !</span>
-                
-            </a>
-        
-        
-            <a>
-                <span id="b" class="letter">Tu es mineur.e, brosse-toi les dents et au lit !</span>
-                
-            </a>
-        
-        
-            <a>
-                <span id="c" class="letter">Bienvenue en boite de nuit, tu es majeure !</span>
-                
-            </a>
-               
-            <a>
-                <span id="d" class="letter">Bienvenue en boite de nuit, brosse-toi les dents et au lit !</span>
-                
-            </a>
-        
-        
-            
-        </div>
 
-        <div id="resultat" class="resultat"></div>
+<div id="grosDiv">
 
 
+    <img id="adaImg" src="./images/ada-neutre.svg" alt="">
 
-        <script>
+    <div id="multichoix">
 
-            function isCorrect() {
-                $('.resultat').css("border", "1px solid #2ecc71");
-                $('.resultat').css("padding", "10px");
-                $('.resultat').css("margin-bottom", "50px");
-                $('.resultat').css("color", "#fff");
-                resultat.innerHTML = "Bien joué! La réponse est correcte!";
-            }
+        <a>
+            <span id="a" class="letter"> Hello World !</span>
 
-            function isWrong() {
-                $('.resultat').css("border", "1px solid #d91e50");
-                $('.resultat').css("padding", "10px");
-                $('.resultat').css("margin-bottom", "50px");
-                $('.resultat').css("color", "#fff");
-                resultat.innerHTML = "Dommage ... la bonne réponse est CSS";
+        </a>
 
-            }
 
-            function answer(item, bool) {
-                if (bool === "true") {
-                    $(item).click(function() {
-                        isCorrect();
-                    });
+        <a>
+            <span id="b" class="letter">Tu es mineur.e, brosse-toi les dents et au lit !</span>
 
-                } else if (bool === "false") {
-                    $(item).click(function() {
-                        isWrong();
-                    });
-                }
-            }
+        </a>
 
-            answer("#a", "false")
-            answer("#b", "false")
-            answer("#c", "true")
-            answer("#d", "false")
-        </script>
-        
-        
+
+        <a>
+            <span id="c" class="letter">Bienvenue en boite de nuit, tu es majeure !</span>
+
+        </a>
+
+        <a>
+            <span id="d" class="letter">Bienvenue en boite de nuit, brosse-toi les dents et au lit !</span>
+
+        </a>
+
+
+
+    </div>
+
+</div>
+
+<div id="resultat" class="resultat"></div>
+
+
+
+<script>
+
+    function isCorrect() {
+        $('.resultat').css("border", "1px solid #2ecc71");
+        $('.resultat').css("padding", "10px");
+        $('.resultat').css("margin-bottom", "50px");
+        $('.resultat').css("color", "#fff");
+        resultat.innerHTML = "Bien joué! La réponse est correcte!";
+    }
+
+    function isWrong() {
+        $('.resultat').css("border", "1px solid #d91e50");
+        $('.resultat').css("padding", "10px");
+        $('.resultat').css("margin-bottom", "50px");
+        $('.resultat').css("color", "#fff");
+        resultat.innerHTML = "Dommage ... la bonne réponse est 'Bienvenue en boite de nuit, tu es majeure !'";
+
+    }
+
+    function answer(item, bool) {
+        if (bool === "true") {
+            $(item).click(function() {
+                isCorrect();
+            });
+
+        } else if (bool === "false") {
+            $(item).click(function() {
+                isWrong();
+            });
+        }
+    }
+
+    answer("#a", "false")
+    answer("#b", "false")
+    answer("#c", "true")
+    answer("#d", "false")
+</script>
+
+
 
 
 

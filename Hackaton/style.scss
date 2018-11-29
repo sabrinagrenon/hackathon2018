@@ -37,7 +37,7 @@ $titreFont: 'Oswald';
 * { box-sizing: border-box;
     background-color: $greyColor;
     @extend %font;
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
 }
 header{
     img{
@@ -122,6 +122,20 @@ h3 {
     padding:10px;
     
 }
+#grosDiv {
+    display : flex;
+    justify-content:center;
+    align-items: center;
+    
+    #adaImg {
+        width: 20%;
+        margin-right: 20%;
+    }
+    #drag {
+        width: 50%;
+        height: auto;
+    }
+}
 // exercice 1
 #multichoix{
     display: flex;
@@ -130,6 +144,8 @@ h3 {
     align-content: center;
     margin-top: 60px;
     margin-bottom: 60px;
+    width: 30%;
+    text-align: center;
     
     a{
        @extend %border;
@@ -197,8 +213,10 @@ h3 {
 // exercice 3
 
 // exercice drag drop question 2
-
-/*
+#barre{
+    //margin-bottom: 100px;
+    height: 50px;
+}
 #draggables{
         display: flex;
         justify-content: center;
@@ -238,7 +256,6 @@ h3 {
             justify-content: center;
             align-items: center;
 }
-*/
 
 
 /*Bar de progression*/

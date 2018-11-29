@@ -33,32 +33,47 @@
     });
 
 </script>
+<div id=theorie>
+    <p>
+        Théorie: Les balises HTML
+        Comme dans tous les langages, le HTML est soumis à des règles syntaxiques. Nous allons ici aborder quelques conventions essentielles. Les balises sont toujours formées de chevrons (&lt;&gt;) entourant son nom. La plupart du temps, les balises fonctionnent par paire composée d'une balise ouvrante et d'une balise fermante qui ont obligatoirement le même nom :  « &lt;html&gt; Contenu &lt;/html&gt; ». L'imbrication des balises se fait toujours par englobement et non par chevauchement. On referme toujours les premières balises en dernier lieu. Voyons ça comme des ensembles, entourant d'autres ensembles : « &lt;p&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt; ».
 
-<h3 id="q">jQuery - Drag and drop</h3>
+    </p>
+</div>    
 
-<div id="draggables" class="container">
-    <div class="draggable-container">
-        <span class="draggable" drop-target="1">1</span>
+<h3 id="q">Mettez ces différentes balises dans le bon ordre </h3>
+<div id="grosDiv">
+
+
+    <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+
+    <div id="drag">
+        <div id="draggables" class="container">
+            <div class="draggable-container">
+                <span class="draggable" drop-target="1">&lt;/body&gt;</span>
+            </div>
+            <div class="draggable-container">
+                <span class="draggable" drop-target="2">&lt;html&gt;</span>
+            </div>
+            <div class="draggable-container">
+                <span class="draggable" drop-target="3">&lt;/html&gt;</span>
+            </div>
+            <div class="draggable-container">
+                <span class="draggable" drop-target="4">&lt;body&gt;</span>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="droppables" class="container">
+            <div id="2" class="droppable">1</div>
+            <div id="4" class="droppable">2</div>
+            <div id="1" class="droppable">3</div>
+            <div id="3" class="droppable">4</div>
+
+        </div>
     </div>
-    <div class="draggable-container">
-        <span class="draggable" drop-target="2">2</span>
-    </div>
-    <div class="draggable-container">
-        <span class="draggable" drop-target="3">3</span>
-    </div>
-    <div class="draggable-container">
-        <span class="draggable" drop-target="4">4</span>
-    </div>
-</div>
-
-
-
-
-
-<div id="droppables" class="container">
-    <div id="1" class="droppable">1</div>
-    <div id="2" class="droppable">2</div>
-    <div id="3" class="droppable">3</div>
-    <div id="4" class="droppable">4</div>
 
 </div>

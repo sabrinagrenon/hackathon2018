@@ -23,7 +23,7 @@ body section {
 * {
   box-sizing: border-box;
   background-color: #0D0D0D;
-  scroll-behavior: smooth; }
+  /*scroll-behavior: smooth;*/ }
 
 header img {
   width: 15%;
@@ -77,13 +77,26 @@ h3 {
   margin: 10px;
   padding: 10px; }
 
+#grosDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #grosDiv #adaImg {
+    width: 20%;
+    margin-right: 20%; }
+  #grosDiv #drag {
+    width: 50%;
+    height: auto; }
+
 #multichoix {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   margin-top: 60px;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  width: 30%;
+  text-align: center; }
   #multichoix a {
     cursor: pointer; }
 
@@ -128,47 +141,43 @@ h3 {
   justify-content: center;
   align-items: center; }
 
-/*
-#draggables{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        font-size: 20px;
-        font-weight: 500;
-    
-}
-#draggables>div {
-    margin: 10px;
-}
-.draggable {
-            width: 150px;
-            height: 150px;
-            
-            background-color:$greenColor ;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            span{
-                background-color:transparent;
-                text-align: center;
-            }
-        }
-#droppables{
-    display: flex;
-    justify-content: center;
-}
+#barre {
+  height: 50px; }
 
-#droppables>div{
-            width: 150px;
-            height: 150px;
-            border: 1px solid $greenColor;
-            margin: 50px;
-            //text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-}
-*/
+#draggables {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500; }
+
+#draggables > div {
+  margin: 10px; }
+
+.draggable {
+  width: 150px;
+  height: 150px;
+  background-color: #06FF61;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .draggable span {
+    background-color: transparent;
+    text-align: center; }
+
+#droppables {
+  display: flex;
+  justify-content: center; }
+
+#droppables > div {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #06FF61;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 /*Bar de progression*/
 .progressbar li {
   list-style-type: none;

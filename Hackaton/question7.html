@@ -3,89 +3,96 @@
 
 
 
-    
-       
-        <div class="theorie">
-            <p>
-                Théorie: Un peu d'histoire,,,
-L’histoire du jeu vidéo débute dans les années 50 mais il ne se fera connaître du grand public que dans les années 70 grâce aux premières bornes d’arcades et consoles. L’un des premiers jeux qui remporta un grand succès se jouait à deux joueurs et n’était composé que de deux rectangles se renvoyant une petite balle. Au départ, il a été conçu pour distraire les visiteurs du laboratoire de Brookhaven à New York et a été adapté plus tard pour un écran cathodique de 15 pouces.
 
-            </p>
-        </div>
-        
-       
 
-        <div id="multichoix">
-            <h3 id="q">Quel est le jeu le plus ancien parmi la liste ci-dessous ?</h3>
-            <a>
-                <span id="a" class="letter">Pacman</span>
-                
-            </a>
-        
-        
-            <a>
-                <span id="b" class="letter">Pong</span>
-               
-            </a>
-        
-        
-            <a>
-                <span id="c" class="letter">Asteroids</span>
-               
-            </a>            
-               
-            <a>
-                <span id="d" class="letter">Space Invaders</span>
-                
-            </a>
-        
-        
-            
-        </div>
+<div class="theorie">
+    <p>
+        Théorie: Un peu d'histoire,,,
+        L’histoire du jeu vidéo débute dans les années 50 mais il ne se fera connaître du grand public que dans les années 70 grâce aux premières bornes d’arcades et consoles. L’un des premiers jeux qui remporta un grand succès se jouait à deux joueurs et n’était composé que de deux rectangles se renvoyant une petite balle. Au départ, il a été conçu pour distraire les visiteurs du laboratoire de Brookhaven à New York et a été adapté plus tard pour un écran cathodique de 15 pouces.
 
-        <div id="resultat" class="resultat"></div>
+    </p>
+</div>
 
 
 
-        <script>
+<h3 id="q">Quel est le jeu le plus ancien parmi la liste ci-dessous ?</h3>
+<div id="grosDiv">
 
-            function isCorrect() {
-                $('.resultat').css("border", "1px solid #2ecc71");
-                $('.resultat').css("padding", "10px");
-                $('.resultat').css("margin-bottom", "50px");
-                $('.resultat').css("color", "#fff");
-                resultat.innerHTML = "Bien joué! La réponse est correcte!";
-            }
 
-            function isWrong() {
-                $('.resultat').css("border", "1px solid #d91e50");
-                $('.resultat').css("padding", "10px");
-                $('.resultat').css("margin-bottom", "50px");
-                $('.resultat').css("color", "#fff");
-                resultat.innerHTML = "Dommage ... la bonne réponse est CSS";
+    <img id="adaImg" src="./images/ada-neutre.svg" alt="">
 
-            }
 
-            function answer(item, bool) {
-                if (bool === "true") {
-                    $(item).click(function() {
-                        isCorrect();
-                    });
+    <div id="multichoix">
+        <a>
+            <span id="a" class="letter">Pacman</span>
 
-                } else if (bool === "false") {
-                    $(item).click(function() {
-                        isWrong();
-                    });
-                }
-            }
+        </a>
 
-            answer("#a", "false")
-            answer("#b", "true")
-            answer("#c", "false")
-            answer("#d", "false")
-        </script>
-        
-        
+
+        <a>
+            <span id="b" class="letter">Pong</span>
+
+        </a>
+
+
+        <a>
+            <span id="c" class="letter">Asteroids</span>
+
+        </a>            
+
+        <a>
+            <span id="d" class="letter">Space Invaders</span>
+
+        </a>
+
+
+
+    </div>
+</div>
+
+<div id="resultat" class="resultat"></div>
+
+
+
+<script>
+
+    function isCorrect() {
+        $('.resultat').css("border", "1px solid #2ecc71");
+        $('.resultat').css("padding", "10px");
+        $('.resultat').css("margin-bottom", "50px");
+        $('.resultat').css("color", "#fff");
+        resultat.innerHTML = "Bien joué! La réponse est correcte!";
+    }
+
+    function isWrong() {
+        $('.resultat').css("border", "1px solid #d91e50");
+        $('.resultat').css("padding", "10px");
+        $('.resultat').css("margin-bottom", "50px");
+        $('.resultat').css("color", "#fff");
+        resultat.innerHTML = "Dommage ... la bonne réponse est Pong";
+
+    }
+
+    function answer(item, bool) {
+        if (bool === "true") {
+            $(item).click(function() {
+                isCorrect();
+            });
+
+        } else if (bool === "false") {
+            $(item).click(function() {
+                isWrong();
+            });
+        }
+    }
+
+    answer("#a", "false")
+    answer("#b", "true")
+    answer("#c", "false")
+    answer("#d", "false")
+</script>
+
+
 
 
 

@@ -5,55 +5,62 @@
         <title>Document</title>
         <script type="text/javascript">
             var answers = "#";
- 
+
             function checkAnswers() {
                 userAnswers = document.myForm.quOne.value;
-                
+
                 if(userAnswers == answers) {
                     $('#monDiv').css("border", "1px solid #2ecc71");
-                 $('#monDiv').html ("Bien joué! La réponse est correcte!");
-                $('#monDiv').css("padding", "10px");
-                $('#monDiv').css("margin-bottom", "50px");
-                $('#monDiv').css("color", "#fff");
+                    $('#monDiv').html ("Bien joué! La réponse est correcte!");
+                    $('#monDiv').css("padding", "10px");
+                    $('#monDiv').css("margin-bottom", "50px");
+                    $('#monDiv').css("color", "#fff");
 
-                
+
                 } 
                 else{
-                   $('#monDiv').css("border", "1px solid #d91e50");
-                 $('#monDiv').css("padding", "10px");
-                 $('#monDiv').css("margin-bottom", "50px");
-                 $('#monDiv').css("color", "#fff");
-                 $('#monDiv').html  ("Dommage ... la bonne réponse est " + answers)
+                    $('#monDiv').css("border", "1px solid #d91e50");
+                    $('#monDiv').css("padding", "10px");
+                    $('#monDiv').css("margin-bottom", "50px");
+                    $('#monDiv').css("color", "#fff");
+                    $('#monDiv').html  ("Dommage ... la bonne réponse est " + answers)
                 }
             }
-  
+
         </script>
     </head>
 
     <body>
-    
-    <div class="theorie">
-        <p>
-            Théorie: Lien HTML et CSS <br>
-            Pour lier son code HTML avec son code CSS, il suffit de mettre un lien dans sa page HTML qui pointe vers la page de style. Pour savoir quel code de style s'applique à quel élément, nous utilisons des sélecteurs.
-            Les sélecteurs #id et .class nous permettent de cibler un élément en particulier. Nous devons écrire nos attributs id et class à l’intérieur de la balise ouvrante d’un élément HTML et leur attribuer un nom qui sera repris dans la feuille de style CSS.
+
+        <div class="theorie">
+            <p>
+                Théorie: Lien HTML et CSS <br>
+                Pour lier son code HTML avec son code CSS, il suffit de mettre un lien dans sa page HTML qui pointe vers la page de style. Pour savoir quel code de style s'applique à quel élément, nous utilisons des sélecteurs.
+                Les sélecteurs #id et .class nous permettent de cibler un élément en particulier. Nous devons écrire nos attributs id et class à l’intérieur de la balise ouvrante d’un élément HTML et leur attribuer un nom qui sera repris dans la feuille de style CSS.
             </p>
         </div>
-    
- <h3 id="q">Sur base du code html suivant, tape le symbole adéquat dans le code css </h3>
-        <form name="myForm">
-            Html :&lt;p id= « paragraphe » &gt; Je suis un paragraphe &lt;/p&gt;
-            Css :
 
-            <input type="text" name="quOne">
-       
-            paragraphe {
+        <h3 id="q">Sur base du code html suivant, tape le symbole adéquat dans le code css </h3>
+        <div id="grosDiv">
+
+
+            <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+
+
+            <form name="myForm">
+                Html :&lt;p id= « paragraphe » &gt; Je suis un paragraphe &lt;/p&gt;
+                Css :
+
+                <input type="text" name="quOne">
+
+                paragraphe {
                 Color : red ;
-            }
+                }
 
-        
-            <button type="button" onclick="checkAnswers()">Check your answers</button>
-        </form>
+
+                <button type="button" onclick="checkAnswers()">Check your answers</button>
+            </form>
+        </div>
 
         <div id="monDiv"></div>
 

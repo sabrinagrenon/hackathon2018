@@ -5,53 +5,61 @@
         <title>Document</title>
         <script type="text/javascript">
             var answers = "==";
- 
+
             function checkAnswers() {
                 userAnswers = document.myForm.quOne.value;
-                
-                 if(userAnswers == answers) {
-                    $('#monDiv').css("border", "1px solid #2ecc71");
-                 $('#monDiv').html ("Bien joué! La réponse est correcte!");
-                $('#monDiv').css("padding", "10px");
-                $('#monDiv').css("margin-bottom", "50px");
-                $('#monDiv').css("color", "#fff");
 
-                
+                if(userAnswers == answers) {
+                    $('#monDiv').css("border", "1px solid #2ecc71");
+                    $('#monDiv').html ("Bien joué! La réponse est correcte!");
+                    $('#monDiv').css("padding", "10px");
+                    $('#monDiv').css("margin-bottom", "50px");
+                    $('#monDiv').css("color", "#fff");
+
+
                 } 
                 else{
-                   $('#monDiv').css("border", "1px solid #d91e50");
-                 $('#monDiv').css("padding", "10px");
-                 $('#monDiv').css("margin-bottom", "50px");
-                 $('#monDiv').css("color", "#fff");
-                 $('#monDiv').html  ("Dommage ... la bonne réponse est " + answers)
+                    $('#monDiv').css("border", "1px solid #d91e50");
+                    $('#monDiv').css("padding", "10px");
+                    $('#monDiv').css("margin-bottom", "50px");
+                    $('#monDiv').css("color", "#fff");
+                    $('#monDiv').html  ("Dommage ... la bonne réponse est " + answers)
                 }
             }
-  
+
         </script>
     </head>
 
     <body> 
-       <div class="theorie">
-        <p>
-               Théorie: Les opérateurs de comparaison
-Les opérateurs de comparaison sont bien connus pour quiconque a fait un peu d'algèbre. Mais rassurez-vous, point besoin d'être une machine en mathématiques pour comprendre les concepts basiques de programmation. Les opérateurs de comparaison donnent obligatoirement un résultat positif (true) ou négatif (false). Voici la liste des opérateurs de comparaison les plus courants :
-           « == » égalité
-« &lt;» plus petit que
-« &lt;= » plus petit ou égal
-« > » plus grand que 
-« >= » plus grand ou égal
-!= différent
+        <div class="theorie">
+            <p>
+                Théorie: Les opérateurs de comparaison
+                Les opérateurs de comparaison sont bien connus pour quiconque a fait un peu d'algèbre. Mais rassurez-vous, point besoin d'être une machine en mathématiques pour comprendre les concepts basiques de programmation. Les opérateurs de comparaison donnent obligatoirement un résultat positif (true) ou négatif (false). Voici la liste des opérateurs de comparaison les plus courants :
+                « == » égalité
+                « &lt;» plus petit que
+                « &lt;= » plus petit ou égal
+                « > » plus grand que 
+                « >= » plus grand ou égal
+                != différent
 
             </p>
         </div>
-    
+
 
         <h3 id="q">Question</h3>
-        <form name="myForm">
-           1.	(3 + 2)<input type="text" name="quOne">(8 – 3) = true;
-        
-            <button type="button" onclick="checkAnswers()">Vérifier</button>
-        </form>
+        <div id="grosDiv">
+
+
+            <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+
+
+            <form name="myForm">
+                1.	(3 + 2)<input type="text" name="quOne">(8 – 3) = true;
+
+                <button type="button" onclick="checkAnswers()">Vérifier</button>
+            </form>
+
+        </div>
 
         <div id="monDiv"></div>
 

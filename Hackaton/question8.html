@@ -33,32 +33,49 @@
     });
 
 </script>
+<div class="theorie">
+    <p>
+        Théorie : Les chaînes de caractères et les entiers
+        En programmation, il existe plusieurs type d'objet utilisés. Nous allons te présenter deux d'entre eux. Les premiers sont les chaînes de caractères : ce sont des caractères, des chiffres des mots ou des phrases toujours représentés entre guillemets. Les seconds sont les entiers : ce sont des nombres non décimaux, représentés tels quels, sans guillemets. Contrairement aux chaînes de caractères représentant des nombres, les entiers ont une valeur numérique.
+        Ainsi, 1 + 2  fera 3 mais ‘’1’’ + ‘’2’’ fera 12 .
+        Attention, on ne peut pas additionner une valeur numérique avec un caractère !
+
+    </p>
+</div>
 
 <h3 id="q">jQuery - Drag and drop</h3>
 
-<div id="draggables" class="container">
-    <div class="draggable-container">
-        <span class="draggable" drop-target="1">1</span>
+<div id="grosDiv">
+
+
+    <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+
+
+
+    <div id="draggables" class="container">
+        <div class="draggable-container">
+            <span class="draggable" drop-target="2">	Si a = ‘’3’’ et b = ‘‘2’’, alors a + b = ‘’ ? ‘’ </span>
+        </div>
+        <div class="draggable-container">
+            <span class="draggable" drop-target="1">	Si a = 3 et b = 2, alors a + b =  ?  </span>
+        </div>
+        <div class="draggable-container">
+            <span class="draggable" drop-target="3">	Si a = ‘’3’’ et b = 2, alors a + b = ‘’ ? ‘’ </span>
+        </div>
+        <!--<div class="draggable-container">
+<span class="draggable" drop-target="4">4</span>
+</div>-->
     </div>
-    <div class="draggable-container">
-        <span class="draggable" drop-target="2">2</span>
+
+
+
+
+
+    <div id="droppables" class="container">
+        <div id="1" class="droppable">5</div>
+        <div id="2" class="droppable">32</div>
+        <div id="3" class="droppable">OPERATION IMPOSSIBLE</div>
+        <!--<div id="4" class="droppable">4</div>-->
+
     </div>
-    <div class="draggable-container">
-        <span class="draggable" drop-target="3">3</span>
-    </div>
-    <div class="draggable-container">
-        <span class="draggable" drop-target="4">4</span>
-    </div>
-</div>
-
-
-
-
-
-<div id="droppables" class="container">
-    <div id="1" class="droppable">1</div>
-    <div id="2" class="droppable">2</div>
-    <div id="3" class="droppable">3</div>
-    <div id="4" class="droppable">4</div>
-
 </div>
