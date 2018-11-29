@@ -132,8 +132,21 @@ h3 {
         margin-right: 20%;
     }
     #drag {
-        width: 50%;
+        width: 70%;
         height: auto;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid #fff;
+    }
+    button{
+        border:1px solid #fff;
+        width: 60px;
+        padding: 5px;
     }
 }
 // exercice 1
@@ -243,14 +256,15 @@ h3 {
         }
 #droppables{
     display: flex;
-    justify-content: center;
+    //width: 100%;
+   // justify-content:space-between;
 }
 
 #droppables>div{
             width: 150px;
             height: 150px;
             border: 1px solid $greenColor;
-            margin: 50px;
+            margin: 10px;
             //text-align: center;
             display: flex;
             justify-content: center;
