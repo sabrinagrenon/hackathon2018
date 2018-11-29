@@ -1,36 +1,46 @@
 
 
 
-        <!--<div class="quiz-header"></div>-->
-       
 
+
+    
+       
+        <div class="theorie">
+            <p>
+                Théorie: Un peu d'histoire,,,
+L’histoire du jeu vidéo débute dans les années 50 mais il ne se fera connaître du grand public que dans les années 70 grâce aux premières bornes d’arcades et consoles. L’un des premiers jeux qui remporta un grand succès se jouait à deux joueurs et n’était composé que de deux rectangles se renvoyant une petite balle. Au départ, il a été conçu pour distraire les visiteurs du laboratoire de Brookhaven à New York et a été adapté plus tard pour un écran cathodique de 15 pouces.
+
+            </p>
+        </div>
         
        
 
         <div id="multichoix">
-            <h3 id="q">What's the only city that has hosted the Summer Olympics three times?</h3>
+            <h3 id="q">Quel est le jeu le plus ancien parmi la liste ci-dessous ?</h3>
             <a>
-                <span id="a" class="letter">LONDON</span>
-                <!--<span><p>London</p></span>-->
+                <span id="a" class="letter">Pacman</span>
+                
             </a>
         
         
             <a>
-                <span id="b" class="letter">Paris</span>
-                <!--<span><p>Paris</p></span>-->
+                <span id="b" class="letter">Pong</span>
+               
             </a>
         
         
             <a>
-                <span id="c" class="letter">Athens</span>
-                <!--<span><p>Athens</p></span>-->
-            </a>
-        
-        
+                <span id="c" class="letter">Asteroids</span>
+               
+            </a>            
+               
             <a>
-                <span id="d" class="letter">Los Angeles</span>
-                <!--<span><p>Los Angeles</p></span>-->
+                <span id="d" class="letter">Space Invaders</span>
+                
             </a>
+        
+        
+            
         </div>
 
         <div id="resultat" class="resultat"></div>
@@ -39,7 +49,7 @@
 
         <script>
 
-             function isCorrect() {
+            function isCorrect() {
                 $('.resultat').css("border", "1px solid #2ecc71");
                 $('.resultat').css("padding", "10px");
                 $('.resultat').css("margin-bottom", "50px");
@@ -69,8 +79,8 @@
                 }
             }
 
-            answer("#a", "true")
-            answer("#b", "false")
+            answer("#a", "false")
+            answer("#b", "true")
             answer("#c", "false")
             answer("#d", "false")
         </script>
