@@ -3,34 +3,50 @@
 
         <!--<div class="quiz-header"></div>-->
        
-
+        <div class="theorie">
+            <p>
+        Théorie: Les structures conditionnelles<br>
+        La structure conditionnelle est un concept essentiel en programmation. Grâce à lui, nous allons pouvoir exécuter l'une ou l'autre instruction selon le cas qui se présente à nous. Les conditions simples s'écrivent avec les mots anglais « if » et « else », qui signifient respectivement « si » et « sinon ». En français, cela donne : 
+        Si « telle condition » est vraie, alors on exécute « telle instruction » . Sinon, on exécute « telle autre instruction »
+            </p>
+        </div>
         
        
 
         <div id="multichoix">
-            <h3 id="q">What's the only city that has hosted the Summer Olympics three times?</h3>
+            <h3 id="q">Si monAge vaut 18 ans, quel est le résultat du bout de code ci-dessous :<br>
+
+if (monAge >= 18){<br>
+	print(« Bienvenue en boîte, tu es majeur.e ! ») ;
+}<br>
+Else {<br>
+	Print(« Tu es mineur.e, brosse-toi les dents et au lit ! ») ;
+}
+</h3>
             <a>
-                <span id="a" class="letter">LONDON</span>
-                <!--<span><p>London</p></span>-->
+                <span id="a" class="letter"> Hello World !</span>
+                
             </a>
         
         
             <a>
-                <span id="b" class="letter">Paris</span>
-                <!--<span><p>Paris</p></span>-->
+                <span id="b" class="letter">Tu es mineur.e, brosse-toi les dents et au lit !</span>
+                
             </a>
         
         
             <a>
-                <span id="c" class="letter">Athens</span>
-                <!--<span><p>Athens</p></span>-->
+                <span id="c" class="letter">Bienvenue en boite de nuit, tu es majeure !</span>
+                
             </a>
-        
-        
+               
             <a>
-                <span id="d" class="letter">Los Angeles</span>
-                <!--<span><p>Los Angeles</p></span>-->
+                <span id="d" class="letter">Bienvenue en boite de nuit, brosse-toi les dents et au lit !</span>
+                
             </a>
+        
+        
+            
         </div>
 
         <div id="resultat" class="resultat"></div>
@@ -69,13 +85,15 @@
                 }
             }
 
-            answer("#a", "true")
+            answer("#a", "false")
             answer("#b", "false")
-            answer("#c", "false")
+            answer("#c", "true")
             answer("#d", "false")
         </script>
         
         
+
+
 
 
 
