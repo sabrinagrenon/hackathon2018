@@ -1,69 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-    
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
 
-<header>
-   <img src="./logo-final-code-hackadamie.png" alt="">
-    
-</header>
+    </head>
 
-<body>
- <section>
-  <div id="intro">
-    <div>  
-    <h1>Envie de coder ? </h1>
-    <div></div>
-    </div>
-    <h2>Faites le quizz avec Ada Lovelace et découvrez les écoles où vous former</h2>
-    <div>
-     <a href="#q"><i class="fas fa-angle-down"></i></a> 
-    </div>  
-      
-  </div>
-    <div class="progress">
-      <div id="progress" class="progress-bar" role="progressbar" aria-valuenow="70"
-      aria-valuemin="0" aria-valuemax="9" style="width:0%">
-        0
-      </div>
-    </div>
-   <div id="question">
-       
-   </div>
-   <button id="next" >Next</button>
-    <script>
-    $(document).ready(function(){
-        let indice = 1;
-        let total = 9;
-        getQuestion();
-        function getQuestion(){
-            $.ajax({
-                url: 'question'+indice+".html",
-                datatype: "html",
-                success: function(data){
-                    $("#question").html(data);
-                }
-            });
-        }
-        
-        
-        $("#next").on("click", function(){
-            let value = (indice) * 100/9 + "%";
-            $("#progress").css("width", value ).html(indice+ "/9");
-            indice++;
+    <header>
+        <img src="./logo-final-code-hackadamie.png" alt="">
 
-            getQuestion();
-        });
-    });
-    </script>
-    </section>
-</body>
+    </header>
+
+    <body>
+        <section>
+            <div id="intro">
+                <div>  
+                    <h1>Envie de coder ? </h1>
+                    <div></div>
+                </div>
+                <h2>Faites le quizz avec Ada Lovelace et découvrez les écoles où vous former</h2>
+                <div>
+                    <a href="#q"><i class="fas fa-angle-down"></i></a> 
+                </div>  
+
+            </div>
+
+            <ul id="progress-bar" class="progressbar">
+                <li class="green active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <div id="question">
+
+            </div>
+            <button id="next" >Next</button>
+            <script>
+                $(document).ready(function(){
+                    let indice = 1;
+                    let total = 9;
+                    getQuestion();
+                    function getQuestion(){
+                        $.ajax({
+                            url: 'question'+indice+".html",
+                            datatype: "html",
+                            success: function(data){
+                                $("#question").html(data);
+                            }
+                        });
+                    }
+
+
+
+                    var compteur = 1;
+                    var color = "green";
+                    var progressBar = {
+                        Bar : $('#progress-bar'),
+                        Reset : function(){
+                            if (this.Bar){
+                                this.Bar.find('li').removeClass('active'); 
+                                indice = 1;
+                            }
+                        },
+                        next: function(){
+
+                            if(compteur > 2){
+                                color = 'purple';
+                            }
+                            if(compteur > 5){
+                                color = 'yellow';
+                            }
+
+                            $('#progress-bar li:not(.active):first').addClass("active").addClass(color);
+                            compteur++;
+
+                        },
+                    }
+
+//                    $("#next").on('click', function(){
+//                        progressBar.next();
+//                        getQuestion();
+//                    })
+
+                    $("#next").on("click", function(){
+//                        let value = (indice) * 100/9 + "%";
+//                        $("#progress-bar").css("width", value ).html(indice+ "/9");
+                        indice++;
+                        getQuestion();
+                        progressBar.next();
+                        
+                    });
+                });
+            </script>
+        </section>
+    </body>
 </html>
