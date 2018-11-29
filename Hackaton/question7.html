@@ -1,37 +1,35 @@
 
 
- 
 
+        <!--<div class="quiz-header"></div>-->
+       
 
-        <div class="quiz-header"></div>
-     
+        
+       
 
-        <div class="question">
+        <div id="multichoix">
             <h3 id="q">What's the only city that has hosted the Summer Olympics three times?</h3>
-        </div>
-
-        <div class="option" id="a">
             <a>
-                <span class="letter"><p>A</p></span>
-                <span><p>London</p></span>
+                <span id="a" class="letter">LONDON</span>
+                <!--<span><p>London</p></span>-->
             </a>
-        </div>
-        <div class="option borderme" id="b">
+        
+        
             <a>
-                <span class="letter"><p>B</p></span>
-                <span><p>Paris</p></span>
+                <span id="b" class="letter">Paris</span>
+                <!--<span><p>Paris</p></span>-->
             </a>
-        </div>
-        <div class="option borderme" id="c">
+        
+        
             <a>
-                <span class="letter"><p>C</p></span>
-                <span><p>Athens</p></span>
+                <span id="c" class="letter">Athens</span>
+                <!--<span><p>Athens</p></span>-->
             </a>
-        </div>
-        <div class="option borderme" id="d">
+        
+        
             <a>
-                <span class="letter"><p>D</p></span>
-                <span><p>Los Angeles</p></span>
+                <span id="d" class="letter">Los Angeles</span>
+                <!--<span><p>Los Angeles</p></span>-->
             </a>
         </div>
 
@@ -41,16 +39,20 @@
 
         <script>
 
-            function isCorrect() {
-                $('.resultat').css("background-color", "#2ecc71");
+             function isCorrect() {
+                $('.resultat').css("border", "1px solid #2ecc71");
+                $('.resultat').css("padding", "10px");
+                $('.resultat').css("margin-bottom", "50px");
                 $('.resultat').css("color", "#fff");
                 resultat.innerHTML = "Bien joué! La réponse est correcte!";
             }
 
             function isWrong() {
-                $('.resultat').css("background-color", "#E23F35");
+                $('.resultat').css("border", "1px solid #d91e50");
+                $('.resultat').css("padding", "10px");
+                $('.resultat').css("margin-bottom", "50px");
                 $('.resultat').css("color", "#fff");
-                resultat.innerHTML = "La bonne réponse est A";
+                resultat.innerHTML = "Dommage ... la bonne réponse est CSS";
 
             }
 

@@ -14,7 +14,7 @@
                     elem = $(this);
                     $(this)
                         .addClass('ui-state-highlight')
-                        .css('background-color', $(ui.draggable).hasClass('trueElem') ? '#1cbc5a' : '#fc0000')
+                        .css('border', $(ui.draggable).hasClass('trueElem') ? '1px solid #2ecc71' : '1px solid #d91e50')
                     $(ui.draggable).css('display', 'none');
 
                 }
@@ -25,19 +25,33 @@
                     elem = $(this);
                     $(this)
                         .addClass('ui-state-hightlight')
-                        .css('background-color', $(ui.draggable).hasClass('falseElem') ? '#1cbc5a' : '#fc0000')
+                        .css('border', $(ui.draggable).hasClass('falseElem') ? '1px solid #2ecc71' : '1px solid #d91e50')
                     $(ui.draggable).css('display', 'none');
                 }
             });
 
             $('#cibles').on('mouseout', function() {
-                elem.css('background-color', '#bfbfbf');
+                elem.css('border', '1px solid #A203FE');
 
             })
         });
 
     </script>
-    
+    <div class="theorie">
+        <p>
+           Théorie: Les opérateurs booléens. <br>
+            En informatique, la binarité est à l'origine de toute chose. Ainsi, pas de demi-teinte, soit c'est l'un, soit c'est l'autre ! La notion de « vrai ou faux (true ou false) » est qualifiée de «booléen ». Ce dernier ne peut valoir que l'un ou l'autre. Le booléen est souvent associé aux opérateurs suivants:
+
+            « NOT » ou « ! » signifie « négation ».
+
+            « OR » signifie  « ou ». Pour être vrai, il faut qu'au moins une des propositions soit vraies.
+            « AND » signifie « et », Pour être vraie, il faut que toutes les propositions soient vraies.
+
+            « XOR » signifie « ou exclusif ». Pour être vraie, il faut que l'une ou l'autre soit vraie mais pas les deux.
+
+
+        </p>
+    </div>
 
     <h3 id="q">Question</h3>
 
@@ -51,7 +65,7 @@
         <div id="elem3" class="falseElem element">
             <p>!True AND False</p>
         </div>
-        <div id="elem4" class="falseElem element">
+        <div id="elem4" class="trueElem element">
             <p>!False OR False</p>
         </div>
     </div>

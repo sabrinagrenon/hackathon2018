@@ -1,37 +1,39 @@
 
 
 
-        <div class="quiz-header"></div>
+        <!--<div class="quiz-header"></div>-->
+       
+        <div class="theorie">
+            <p>
+                Théorie: Premiers pas...
+                Commençons avec la base de la création de site web : Le HTML est un langage de balisage destiné à représenter la structure d’une page: Titres, paragraphes, images, et autres sections. Le CSS vient se rajouter à la structure HTML et permet d'en modifier le visuel: taille, couleur, police et une multitude d'autres effets. Le PHP, quant à lui, est plutôt un langage de programmation dit « côté serveur », il n'est donc pas utilisé pour le design.
+            </p>
+        </div>
+        
        
 
-        <div class="question">
-            <h3 id="q">What's the only city that has hosted the Summer Olympics three times?</h3>
-        </div>
-
-        
+        <div id="multichoix">
+            <h3 id="q">Avec quel langage peut-on modifier le design (couleurs, couleur de fond, …) d’un site web ?</h3>
             <a>
-                <span id="a" class="letter">LONDON</span>
+                <span id="a" class="letter">CSS</span>
                 <!--<span><p>London</p></span>-->
             </a>
         
         
             <a>
-                <span id="b" class="letter">Paris</span>
+                <span id="b" class="letter">PHP</span>
                 <!--<span><p>Paris</p></span>-->
             </a>
         
         
             <a>
-                <span id="c" class="letter">Athens</span>
+                <span id="c" class="letter">HTML</span>
                 <!--<span><p>Athens</p></span>-->
             </a>
         
         
-            <a>
-                <span id="d" class="letter">Los Angeles</span>
-                <!--<span><p>Los Angeles</p></span>-->
-            </a>
-        
+            
+        </div>
 
         <div id="resultat" class="resultat"></div>
 
@@ -40,15 +42,19 @@
         <script>
 
             function isCorrect() {
-                $('.resultat').css("background-color", "#2ecc71");
+                $('.resultat').css("border", "1px solid #2ecc71");
+                $('.resultat').css("padding", "10px");
+                $('.resultat').css("margin-bottom", "50px");
                 $('.resultat').css("color", "#fff");
                 resultat.innerHTML = "Bien joué! La réponse est correcte!";
             }
 
             function isWrong() {
-                $('.resultat').css("background-color", "#E23F35");
+                $('.resultat').css("border", "1px solid #d91e50");
+                $('.resultat').css("padding", "10px");
+                $('.resultat').css("margin-bottom", "50px");
                 $('.resultat').css("color", "#fff");
-                resultat.innerHTML = "La bonne réponse est A";
+                resultat.innerHTML = "Dommage ... la bonne réponse est CSS";
 
             }
 
