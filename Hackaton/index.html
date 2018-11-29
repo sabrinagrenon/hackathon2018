@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     
 </head>
 
 <header>
+   <img src="./logo-final-code-hackadamie.png" alt="">
     
 </header>
 
 <body>
+ <section>
   <div id="intro">
-      
+    <div>  
     <h1>Envie de coder ? </h1>
-    <h2>Faites le quizz avec Ada Lovelace et découvrez les écoles où vous former</h2>  
-      
+    <div></div>
+    </div>
+    <h2>Faites le quizz avec Ada Lovelace et découvrez les écoles où vous former</h2>
+    <div>
+     <a href="#q"><i class="fas fa-angle-down"></i></a> 
+    </div>  
       
   </div>
     <div class="progress">
@@ -31,7 +38,7 @@
    <div id="question">
        
    </div>
-   <button id="next" class="btn btn-primary">Next</button>
+   <button id="next" >Next</button>
     <script>
     $(document).ready(function(){
         let indice = 1;
@@ -57,5 +64,6 @@
         });
     });
     </script>
+    </section>
 </body>
 </html>

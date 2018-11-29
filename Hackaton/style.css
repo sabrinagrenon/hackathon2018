@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 * {
   font-family: "Open Sans";
@@ -6,34 +6,71 @@
 
 /*%bouton { border-radius: 4px; padding: 10px 15px 10px 15px;}
 %boutonInfo { border-radius: 4px; padding: 10px 15px 10px 15px; color: #fff; background-color: $Color; border: 1px solid; }*/
-* {
+body section {
   width: 80%;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
-  background-color: #0D0D0D; }
+  margin-bottom: 50px; }
 
-#intro h1 {
-  font-family: "Oswald"; }
+* {
+  box-sizing: border-box;
+  background-color: #0D0D0D;
+  scroll-behavior: smooth; }
 
-/*
-            .option {
-                cursor: pointer;
-            }
+header img {
+  width: 15%;
+  height: auto;
+  padding: 20px; }
 
-            .option span {
-                display: inline-block;
-            }
+#intro {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 100px; }
+  #intro h1, #intro h2 {
+    font-family: "Oswald"; }
+  #intro h1 {
+    font-size: 70px;
+    font-weight: 700; }
+  #intro h2 {
+    font-size: 40px;
+    font-weight: 300; }
+  #intro div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #intro div a {
+      text-decoration: none;
+      margin-top: 100px; }
+      #intro div a i {
+        color: #fff;
+        font-size: 50px; }
 
-            .letter {
-                width: 40px;
-                height: 35px;
-                background-color: #3498db;
-                text-align: center;
-                margin: 5px 10px;
-                border-radius: 4px;
-            }*/
+h3 {
+  font-weight: 400;
+  font-size: 30px; }
+
+.option {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+/*.option span {
+    display: inline-block;
+}*/
+.letter {
+  border: 1px solid #fff;
+  /*
+                  text-align: center;
+  */
+  margin: 20px;
+  padding: 15px; }
+
 /*
 
         #contenant {

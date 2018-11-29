@@ -1,36 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
-        <script type="text/javascript">
-            var answers = "Paris";
- 
-            function checkAnswers() {
-                userAnswers = document.myForm.quOne.value;
-                
-                if(userAnswers == answers) {
 
-                    monDiv.innerHTML ="Bien joué! La réponse est correcte!";
-                } 
-                else{
-                    monDiv.innerHTML = "La bonne réponse est " + answers;
+
+    <script>
+        $(document).ready(function() {
+             
+           
+            $('#contenant div').draggable();
+
+            let elem = null;
+            //    $('.element').
+            //    
+            $('#targettrue').droppable({
+                drop: function(event, ui) {
+                    elem = $(this);
+                    $(this)
+                        .addClass('ui-state-highlight')
+                        .css('background-color', $(ui.draggable).hasClass('trueElem') ? '#1cbc5a' : '#fc0000')
+                    $(ui.draggable).css('display', 'none');
+
                 }
-            }
-  
-        </script>
-    </head>
+            });
 
-    <body>
+            $('#targetfalse').droppable({
+                drop: function(event, ui) {
+                    elem = $(this);
+                    $(this)
+                        .addClass('ui-state-hightlight')
+                        .css('background-color', $(ui.draggable).hasClass('falseElem') ? '#1cbc5a' : '#fc0000')
+                    $(ui.draggable).css('display', 'none');
+                }
+            });
 
-        <form name="myForm">
-            What is the capital of France? <input type="text" name="quOne">
-        
-            <button type="button" onclick="checkAnswers()">Check your answers</button>
-        </form>
+            $('#cibles').on('mouseout', function() {
+                elem.css('background-color', '#bfbfbf');
 
-        <div id="monDiv"></div>
+            })
+        });
+
+    </script>
+    
+
+    <h3 id="q">Question</h3>
+
+    <div id="contenant">
+        <div id="elem1" class="trueElem element">
+            <p>True AND True</p>
+        </div>
+        <div id="elem2" class="trueElem element">
+            <p>True OR True</p>
+        </div>
+        <div id="elem3" class="falseElem element">
+            <p>!True AND False</p>
+        </div>
+        <div id="elem4" class="falseElem element">
+            <p>!False OR False</p>
+        </div>
+    </div>
 
 
-    </body>
-</html>
+
+
+
+    <div id="cibles">
+        <div id="targettrue" class="ui-widget-header">True
+        </div>
+        <div id="targetfalse" class="ui-widget-header">False
+        </div>
+
+    </div>
+
