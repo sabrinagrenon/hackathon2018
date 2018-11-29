@@ -8,16 +8,98 @@
     text-align: center;
 }
 
+body section {
+    width: 80%;
+    height: auto;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px; 
+}
+
+.encadrer {
+    border: 1px solid white;
+    margin-bottom: 50px;
+}
+
 h1 {
     font-family: "Oswald";
     font-size: 70px;
     font-weight: 700;
 }
 
-body section {
-  width: 80%;
-  height: auto;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px; }
+h2 {
+    font-size: 25px;
+}
+.paragraphe1{
+    padding-bottom: 30px;
+}
+
+.formations {
+    display: flex;
+}
+
+.formation {
+    width: 350px;
+    height: 530px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.formation:nth-child(1){
+    border: 1px solid #A203FE;
+}
+
+.formation:nth-child(2){
+    border: 1px solid #06FF61;
+}
+
+.formation:nth-child(3){
+    border: 1px solid #E0BD10;
+}
+
+#wad {
+    background-color: #A203FE;
+    margin: 0;
+    height: 35px;
+    padding-top: 10px;
+}
+
+#web {
+    background-color: #06FF61;
+    margin: 0;
+    height: 35px;
+    padding-top: 10px;
+}
+
+#game {
+    background-color: #E0BD10;
+    margin: 0;
+    height: 35px;
+    padding-top: 10px;
+}
+
+.badge {
+    height: 80px;
+    width: 80px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.formation > p {
+    width: 250px;
+    height: 350px;
+    text-align: left;
+    margin: auto;
+}
+
+a {
+   font-weight: bold;
+}
+
+.dernier-paragraphe{
+    font-size: 25px;
+    margin-top: 40px;
+}
