@@ -63,6 +63,7 @@
 
         if (userAnswers == answers) {
             $('#monDiv').css("border", "1px solid #2ecc71");
+            $('#adaImg').attr('src', './images/ada-contente.svg');
             $('#monDiv').html("Bien joué! La réponse est correcte!");
             $('#monDiv').css("padding", "10px");
             $('#monDiv').css("margin-bottom", "50px");
@@ -71,6 +72,7 @@
 
         } else {
             $('#monDiv').css("border", "1px solid #d91e50");
+            $('#adaImg').attr('src', './images/ada-triste.svg');
             $('#monDiv').css("padding", "10px");
             $('#monDiv').css("margin-bottom", "50px");
             $('#monDiv').css("color", "#fff");
