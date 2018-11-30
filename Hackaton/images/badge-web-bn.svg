@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+<path fill="#A6A6A6" d="M423.192,424.357c-96.818,96.818-253.787,96.814-350.601,0c-96.814-96.813-96.818-253.782,0-350.601
+	c96.814-96.814,253.783-96.814,350.601,0C520.002,170.571,520.007,327.544,423.192,424.357z"/>
+<path fill="#646464" stroke="#646464" stroke-width="2.1861" stroke-miterlimit="10" d="M432.77,312.107
+	c0,19.666-16.831,35.602-37.605,35.602h-292.51c-20.772,0-37.609-15.936-37.609-35.602V153.883
+	c0-19.657,16.837-35.598,37.609-35.598h292.51c20.774,0,37.605,15.941,37.605,35.598V312.107z"/>
+<path fill="#FFFFFF" d="M282.76,373.966c0,2.664-3.1,4.822-6.925,4.822h-53.855c-3.823,0-6.923-2.158-6.923-4.822V352.53
+	c0-2.66,3.1-4.821,6.923-4.821h53.855c3.825,0,6.925,2.161,6.925,4.821V373.966z"/>
+<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-miterlimit="10" x1="184" y1="380.5" x2="313" y2="380.5"/>
+<path fill="#FFFFFF" d="M63,306h369.874l-0.259,11.005c0,0-5.693,31.995-37.451,31.995c-31.757,0-293.176,0-293.176,0
+	S72,346.915,63,317.149V306z"/>
+<circle fill="#646464" stroke="#646464" stroke-width="2.1861" stroke-miterlimit="10" cx="247.627" cy="324.25" r="10.36"/>
+<rect x="117" y="154" fill="#7F8080" stroke="#7F8080" stroke-width="2" stroke-miterlimit="10" width="79" height="122"/>
+<rect x="210" y="205" fill="#FFFFFF" width="79" height="70"/>
+<rect x="305" y="182" fill="#7F8080" stroke="#7F8080" stroke-width="2" stroke-miterlimit="10" width="79" height="94"/>
+<polygon fill="#FFFFFF" points="252.821,181.445 247.25,173.598 243.127,177.979 239.743,156.583 258.002,167.578 252.418,170.208 
+	257.575,177.865 "/>
+<path opacity="0.2" fill="#FFFFFF" d="M248.908,0.415C385.818,0.417,496.82,111.411,496.82,248.327
+	c0,136.923-110.998,247.912-247.912,247.912"/>
+</svg>
