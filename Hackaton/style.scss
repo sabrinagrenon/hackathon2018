@@ -131,10 +131,13 @@ h3 {
     font-size: 20px;
     width: 100px;
     height: 40px;
-    
+    visibility: visible;
     align-items: flex-end;
     
     
+}
+#fin{
+    visibility: hidden;
 }
 
 .theorie{
