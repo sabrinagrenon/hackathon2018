@@ -1,60 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
-        <script type="text/javascript">
-            var answers = "attributs";
+<style>
 
-            function checkAnswers() {
-                userAnswers = document.myForm.quOne.value;
+    .popup-overlay{
+
+  visibility:hidden;
+  position:absolute;
+  background:#ffffff;
+  border:3px solid #666666;
+  width:50%;
+  height:50%;
+  left:25%; 
+}
+.popup-overlay.active{
+
+  visibility:visible;
+  text-align:center;
+    color: black;
+}
+
+.popup-content {
+
+ visibility:hidden;
+}
+
+.popup-content.active {
+
+  visibility:visible;
+}
+
+.bouton-pop{
+  display:inline-block;
+  vertical-align:middle;
+  border-radius:30px;
+  margin:.20rem;
+  font-size: 1rem;
+  color:#666666;
+  background:	#ffffff;
+  border:1px solid #666666;  
+}
+
+.bouton-pop:hover{
+  border:1px solid #666666;
+  background:#666666;
+  color:#ffffff;
+}
+    
+</style>
+<script type="text/javascript">
+    $('.aide').on('click', function() {
+        $('.popup-overlay, popup-content').addClass('active');
+
+    });
+
+    $('.close, .popup-overlay').on('click', function() {
+        $('.popup-overlay, .popup-content').removeClass('active');
+    });
+    var answers = "attributs";
+
+    function checkAnswers() {
+        userAnswers = document.myForm.quOne.value;
 
 
 
-                if(userAnswers == answers) {
-                    $('#monDiv').css("border", "1px solid #2ecc71");
-                    $('#monDiv').html ("Bien joué! La réponse est correcte!");
-                    $('#monDiv').css("padding", "10px");
-                    $('#monDiv').css("margin-bottom", "50px");
-                    $('#monDiv').css("color", "#fff");
+        if (userAnswers == answers) {
+            $('#monDiv').css("border", "1px solid #2ecc71");
+            $('#monDiv').html("Bien joué! La réponse est correcte!");
+            $('#monDiv').css("padding", "10px");
+            $('#monDiv').css("margin-bottom", "50px");
+            $('#monDiv').css("color", "#fff");
 
 
-                } 
-                else{
-                    $('#monDiv').css("border", "1px solid #d91e50");
-                    $('#monDiv').css("padding", "10px");
-                    $('#monDiv').css("margin-bottom", "50px");
-                    $('#monDiv').css("color", "#fff");
-                    $('#monDiv').html("Dommage ... la bonne réponse est " + answers)
-                }
-            }
+        } else {
+            $('#monDiv').css("border", "1px solid #d91e50");
+            $('#monDiv').css("padding", "10px");
+            $('#monDiv').css("margin-bottom", "50px");
+            $('#monDiv').css("color", "#fff");
+            $('#monDiv').html("Dommage ... la bonne réponse est " + answers)
+        }
+    }
 
-        </script>
-    </head>
+</script>
 
-    <body>
-        <div class="theorie">
-           <h4>Les classes</h4>
-            <p>En programmation orientée objets, une classe possède un ensemble d’attributs qui lui sont propres. Prenons par exemple les attributs « Tigres » et « Lions». Ils vont appartenir à une classe nommée « Félins ». Une classe peut être l’attribut d’une autre classe ! Dans notre exemple, la classe «Félins » peut être attribut d’une classe appelée « Carnivores ».</p>
+
+
+<div class="theorie">
+    <h4>Les classes</h4>
+    <p>En programmation orientée objets, une classe possède un ensemble d’attributs qui lui sont propres. Prenons par exemple les attributs « Tigres » et « Lions». Ils vont appartenir à une classe nommée « Félins ». Une classe peut être l’attribut d’une autre classe ! Dans notre exemple, la classe «Félins » peut être attribut d’une classe appelée « Carnivores ».</p>
+</div>
+
+<h3 id="q">Complète la phrase par le mot manquant.</h3>
+<div id="grosDiv">
+
+
+    <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+    <div class='popup-overlay'>
+        <div class="popup-content">
+            <h2>Indice</h2>
+            <p>@- Riz - ...?</p>
+            <button class="close bouton-pop">Fermer</button>
         </div>
+    </div>
 
-        <h3 id="q">Complète la phrase par le mot manquant.</h3>
-        <div id="grosDiv">
-
-
-            <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+    <button class="aide bouton-pop">Indice</button>
 
 
 
-            <form name="myForm">
-                Une classe possède plusieurs<input id="inputq9" type="text" name="quOne">
+    <form name="myForm">
+        Une classe possède plusieurs<input id="inputq9" type="text" name="quOne">
 
-                <button id="btnq9" type="button" onclick="checkAnswers()">Valider</button>
-            </form>
-        </div>
+        <button id="btnq9" type="button" onclick="checkAnswers()">Valider</button>
+    </form>
+</div>
 
-        <div id="monDiv"></div>
-
-
-    </body>
-</html>
+<div id="monDiv"></div>

@@ -1,9 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
+<style>
+
+ .popup-overlay{
+
+  visibility:hidden;
+  position:absolute;
+  background:#ffffff;
+  border:3px solid #666666;
+  width:50%;
+  height:50%;
+  left:25%; 
+}
+.popup-overlay.active{
+
+  visibility:visible;
+  text-align:center;
+    color: black;
+}
+
+.popup-content {
+
+ visibility:hidden;
+}
+
+.popup-content.active {
+
+  visibility:visible;
+}
+
+.bouton-pop{
+  display:inline-block;
+  vertical-align:middle;
+  border-radius:30px;
+  margin:.20rem;
+  font-size: 1rem;
+  color:#666666;
+  background:	#ffffff;
+  border:1px solid #666666;  
+}
+
+.bouton-pop:hover{
+  border:1px solid #666666;
+  background:#666666;
+  color:#ffffff;
+}
+    
+</style>
+       
         <script type="text/javascript">
+            
+            $('.aide').on('click', function(){
+                $('.popup-overlay, popup-content').addClass('active');
+                
+            });
+            
+            $('.close, .popup-overlay').on ('click', function(){
+                $('.popup-overlay, .popup-content').removeClass('active');
+            });
             var answers = "#";
 
             function checkAnswers() {
@@ -31,9 +83,8 @@
             }
 
         </script>
-    </head>
+ 
 
-    <body>
 
         <div class="theorie">
                 <h4>Lien HTML et CSS</h4> 
@@ -48,6 +99,16 @@
 
 
             <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+            <div class='popup-overlay'>
+                  <div class="popup-content">
+                      <h2>Indice</h2>
+                      <p>ID = #
+                      Class = .</p>
+                      <button class="close bouton-pop">Fermer</button>
+                  </div>
+              </div>
+              
+               <button class="aide bouton-pop">Indice</button>
 
 
             <form name="myForm">
@@ -63,6 +124,3 @@
 
         <div id="monDiv"></div>
 
-
-    </body>
-</html>

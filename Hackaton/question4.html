@@ -1,67 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
-        <script type="text/javascript">
-            var answers = "==";
+<style>
 
-            function checkAnswers() {
-                userAnswers = document.myForm.quOne.value;
+    .popup-overlay{
 
-                if(userAnswers == answers) {
-                    $('#monDiv').css("border", "1px solid #2ecc71");
-                    $('#adaImg').attr('src','./images/ada-contente.svg'); 
-                    $('#monDiv').html ("Bien joué! La réponse est correcte!");
-                    $('#monDiv').css("padding", "10px");
-                    $('#monDiv').css("margin-bottom", "50px");
-                    $('#monDiv').css("color", "#fff");
+  visibility:hidden;
+  position:absolute;
+  background:#ffffff;
+  border:3px solid #666666;
+  width:50%;
+  height:50%;
+  left:25%; 
+}
+.popup-overlay.active{
+
+  visibility:visible;
+  text-align:center;
+    color: black;
+}
+
+.popup-content {
+
+ visibility:hidden;
+}
+
+.popup-content.active {
+
+  visibility:visible;
+}
+
+.bouton-pop{
+  display:inline-block;
+  vertical-align:middle;
+  border-radius:30px;
+  margin:.20rem;
+  font-size: 1rem;
+  color:#666666;
+  background:	#ffffff;
+  border:1px solid #666666;  
+}
+
+.bouton-pop:hover{
+  border:1px solid #666666;
+  background:#666666;
+  color:#ffffff;
+}
+    
+</style>
+<script type="text/javascript">
+    $('.aide').on('click', function() {
+        $('.popup-overlay, popup-content').addClass('active');
+
+    });
+
+    $('.close, .popup-overlay').on('click', function() {
+        $('.popup-overlay, .popup-content').removeClass('active');
+    });
+    var answers = "==";
+
+    function checkAnswers() {
+        userAnswers = document.myForm.quOne.value;
+
+        if (userAnswers == answers) {
+            $('#monDiv').css("border", "1px solid #2ecc71");
+            $('#adaImg').attr('src', './images/ada-contente.svg');
+            $('#monDiv').html("Bien joué! La réponse est correcte!");
+            $('#monDiv').css("padding", "10px");
+            $('#monDiv').css("margin-bottom", "50px");
+            $('#monDiv').css("color", "#fff");
 
 
-                } 
-                else{
-                    $('#monDiv').css("border", "1px solid #d91e50");
-                    $('#monDiv').css("padding", "10px");
-                    $('#monDiv').css("margin-bottom", "50px");
-                    $('#monDiv').css("color", "#fff");
-                    $('#adaImg').attr('src','./images/ada-triste.svg'); 
-                    $('#monDiv').html  ("Dommage ... la bonne réponse est " + answers)
-                }
-            }
+        } else {
+            $('#monDiv').css("border", "1px solid #d91e50");
+            $('#monDiv').css("padding", "10px");
+            $('#monDiv').css("margin-bottom", "50px");
+            $('#monDiv').css("color", "#fff");
+            $('#adaImg').attr('src', './images/ada-triste.svg');
+            $('#monDiv').html("Dommage ... la bonne réponse est " + answers)
+        }
+    }
 
-        </script>
-    </head>
+</script>
 
-    <body> 
-        <div class="theorie">
-                <h4>Les opérateurs de comparaison</h4>
-                <p>Les opérateurs de comparaison sont bien connus pour quiconque a fait un peu d'algèbre. Mais rassurez-vous, point besoin d'être une machine en mathématiques pour comprendre les concepts basiques de programmation. Les opérateurs de comparaison donnent obligatoirement un résultat positif (true) ou négatif (false). Voici la liste des opérateurs de comparaison les plus courants :
-                « == » égalité
-                « &lt;» plus petit que
-                « &lt;= » plus petit ou égal
-                « > » plus grand que 
-                « >= » plus grand ou égal
-                != différent</p>
-        </div>
+<div class="theorie">
+    <h4>Les opérateurs de comparaison</h4>
+    <p>Les opérateurs de comparaison sont bien connus pour quiconque a fait un peu d'algèbre. Mais rassurez-vous, point besoin d'être une machine en mathématiques pour comprendre les concepts basiques de programmation. Les opérateurs de comparaison donnent obligatoirement un résultat positif (true) ou négatif (false). Voici la liste des opérateurs de comparaison les plus courants :
+        « == » égalité
+        « &lt;» plus petit que
+        « &lt;= » plus petit ou égal
+        « > » plus grand que
+        « >= » plus grand ou égal
+        != différent</p>
+</div>
 
 
-        <h3 id="q">Complète l'équation par l'opérateur de comparaison manquant.</h3>
-        <div id="grosDiv">
+<h3 id="q">Complète l'équation par l'opérateur de comparaison manquant.</h3>
+<div id="grosDiv">
 
 
-            <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+    <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+    <div class='popup-overlay'>
+                  <div class="popup-content">
+                      <h2>Indice</h2>
+                      <p>Exemple:</p>
+                      <p>8 &lt; 15 = True
+                      9 &gt;= 9 = True
+                      15 != 15 = False</p>
+                      <button class="close bouton-pop">Fermer</button>
+                  </div>
+              </div>
+              
+               <button class="aide bouton-pop">Indice</button>
 
 
-            <form name="myForm">
-                (3 + 2)<input  id="inputq4" type="text" name="quOne">(8 – 3) = true;
+    <form name="myForm">
+        (3 + 2)<input id="inputq4" type="text" name="quOne">(8 – 3) = true;
 
-                <button id="btnq4" type="button" onclick="checkAnswers()">Valider</button>
-            </form>
+        <button id="btnq4" type="button" onclick="checkAnswers()">Valider</button>
+    </form>
 
-        </div>
+</div>
 
-        <div id="monDiv"></div>
-
-
-    </body>
-</html>
+<div id="monDiv"></div>
