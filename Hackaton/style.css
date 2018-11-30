@@ -83,7 +83,7 @@ h3 {
   font-size: 20px;
   width: 100px;
   height: 40px;
-  align-self: flex-start; }
+  align-items: flex-end; }
 
 .theorie {
   border-bottom: 1px solid #fff;
