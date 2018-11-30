@@ -4,70 +4,70 @@
 -->
 <style>
 
- .popup-overlay{
+    .popup-overlay{
 
-  visibility:hidden;
-  position:absolute;
-  background:#ffffff;
-  border:3px solid #666666;
-  width:50%;
-  height:50%;
-  left:25%; 
-}
-.popup-overlay.active{
+        visibility:hidden;
+        position:absolute;
+        background:#ffffff;
+        border:3px solid #666666;
+        width:50%;
+        height:50%;
+        left:25%; 
+    }
+    .popup-overlay.active{
 
-  visibility:visible;
-  text-align:center;
-    color: black;
-}
+        visibility:visible;
+        text-align:center;
+        color: black;
+    }
 
-.popup-content {
+    .popup-content {
 
- visibility:hidden;
-}
+        visibility:hidden;
+    }
 
-.popup-content.active {
+    .popup-content.active {
 
-  visibility:visible;
-}
+        visibility:visible;
+    }
 
-.bouton-pop{
-  display:inline-block;
-  vertical-align:middle;
-  border-radius:30px;
-  margin:.20rem;
-  font-size: 1rem;
-  color:#666666;
-  background:	#ffffff;
-  border:1px solid #666666;  
-}
+    .bouton-pop{
+        display:inline-block;
+        vertical-align:middle;
+        border-radius:30px;
+        margin:.20rem;
+        font-size: 1rem;
+        color:#666666;
+        background:	#ffffff;
+        border:1px solid #666666;  
+    }
 
-.bouton-pop:hover{
-  border:1px solid #666666;
-  background:#666666;
-  color:#ffffff;
-}
-    
+    .bouton-pop:hover{
+        border:1px solid #666666;
+        background:#666666;
+        color:#ffffff;
+    }
+
 </style>
 <script>
-     
+
     $(document).ready(() => {
         $('.aide').on('click', function(){
-                $('.popup-overlay, popup-content').addClass('active');
-                
-            });
-            
-            $('.close, .popup-overlay').on ('click', function(){
-                $('.popup-overlay, .popup-content').removeClass('active');
-            });
-        
+            $('.popup-overlay, popup-content').addClass('active');
+
+        });
+
+        $('.close, .popup-overlay').on ('click', function(){
+            $('.popup-overlay, .popup-content').removeClass('active');
+        });
+
         $('.draggable').on('mousedown', (e) => {
             $(e.target).addClass('grabbed');
         }).on('mouseup', (e) => {
             $(e.target).removeClass('grabbed');
         }).draggable({
             revert: true,
-            
+
         });
 
 
@@ -87,7 +87,7 @@
                 else {
                     $('#adaImg').attr('src','./images/ada-triste.svg'); 
                 }
-                
+
             }
 
         });
@@ -96,25 +96,31 @@
 
 </script>
 <div class=theorie>
-        <h4 class="h4green">Les balises HTML</h4>
-        <p>Comme dans tous les langages, le HTML est soumis à des règles syntaxiques. Nous allons ici aborder quelques conventions essentielles. Les balises sont toujours formées de chevrons (&lt;&gt;) entourant son nom. La plupart du temps, les balises fonctionnent par paire composée d'une balise ouvrante et d'une balise fermante qui ont obligatoirement le même nom :  « &lt;html&gt; Contenu &lt;/html&gt; ». L'imbrication des balises se fait toujours par englobement et non par chevauchement. On referme toujours les premières balises en dernier lieu. Voyons ça comme des ensembles, entourant d'autres ensembles : « &lt;p&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt; ».</p>
-</div>    
+    <h4 class="h4green">Les balises HTML</h4>
+    <p>Comme dans tous les langages, le HTML est soumis à des règles syntaxiques. Nous allons ici aborder quelques conventions essentielles. Les balises sont toujours formées de chevrons (&lt;&gt;) entourant son nom. La plupart du temps, les balises fonctionnent par paire composée d'une balise ouvrante et d'une balise fermante qui ont obligatoirement le même nom :  « &lt;html&gt; Contenu &lt;/html&gt; ». L'imbrication des balises se fait toujours par englobement et non par chevauchement. On referme toujours les premières balises en dernier lieu. Voyons ça comme des ensembles, entourant d'autres ensembles : « &lt;p&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt; ».</p>
+</div> 
+
+<div class="badges">
+    <img src="./images/badge-web-color%20(1).svg" alt="Web couleur">
+    <img src="./images/badge-wad-bn.svg" alt="Wad gris">
+    <img src="./images/badge-game-bn.svg" alt="Game gris">
+</div>   
 
 <h3 id="q">Mettez ces différentes balises dans le bon ordre. </h3>
 <div id="grosDiv">
 
 
     <img id="adaImg" src="./images/ada-neutre.svg" alt="">
-    
+
     <div class='popup-overlay'>
-                  <div class="popup-content">
-                      <h2>Indice</h2>
-                      <p>Chevauchement interdit...</p>
-                      <button class="close bouton-pop">Fermer</button>
-                  </div>
-              </div>
-              
-               <button class="aide bouton-pop">Indice</button>
+        <div class="popup-content">
+            <h2>Indice</h2>
+            <p>Chevauchement interdit...</p>
+            <button class="close bouton-pop">Fermer</button>
+        </div>
+    </div>
+
+    <button class="aide bouton-pop">Indice</button>
 
     <div id="drag">
         <div id="draggables" class="container">

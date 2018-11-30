@@ -1,156 +1,160 @@
 
 <style>
 
- .popup-overlay{
+    .popup-overlay{
 
-  visibility:hidden;
-  position:absolute;
-  background:#ffffff;
-  border:3px solid #666666;
-  width:50%;
-  height:50%;
-  left:25%; 
-}
-.popup-overlay.active{
+        visibility:hidden;
+        position:absolute;
+        background:#ffffff;
+        border:3px solid #666666;
+        width:50%;
+        height:50%;
+        left:25%; 
+    }
+    .popup-overlay.active{
 
-  visibility:visible;
-  text-align:center;
-    color: black;
-}
+        visibility:visible;
+        text-align:center;
+        color: black;
+    }
 
-.popup-content {
+    .popup-content {
 
- visibility:hidden;
-}
+        visibility:hidden;
+    }
 
-.popup-content.active {
+    .popup-content.active {
 
-  visibility:visible;
-}
+        visibility:visible;
+    }
 
-.bouton-pop{
-  display:inline-block;
-  vertical-align:middle;
-  border-radius:30px;
-  margin:.20rem;
-  font-size: 1rem;
-  color:#666666;
-  background:	#ffffff;
-  border:1px solid #666666;  
-}
+    .bouton-pop{
+        display:inline-block;
+        vertical-align:middle;
+        border-radius:30px;
+        margin:.20rem;
+        font-size: 1rem;
+        color:#666666;
+        background:	#ffffff;
+        border:1px solid #666666;  
+    }
 
-.bouton-pop:hover{
-  border:1px solid #666666;
-  background:#666666;
-  color:#ffffff;
-}
-    
+    .bouton-pop:hover{
+        border:1px solid #666666;
+        background:#666666;
+        color:#ffffff;
+    }
+
 </style>
 
-       
-        <div class="theorie">
-                <h4 class="h4green">Premiers pas...</h4>
-                <p>Commençons avec la base de la création de site web : Le HTML est un langage de balisage destiné à représenter la structure d’une page: Titres, paragraphes, images, et autres sections. Le CSS vient se rajouter à la structure HTML et permet d'en modifier le visuel: taille, couleur, police et une multitude d'autres effets. Le PHP, quant à lui, est plutôt un langage de programmation dit « côté serveur », il n'est donc pas utilisé pour le design.</p>
+
+<div class="theorie">
+    <h4 class="h4green">Premiers pas...</h4>
+    <p>Commençons avec la base de la création de site web : Le HTML est un langage de balisage destiné à représenter la structure d’une page: Titres, paragraphes, images, et autres sections. Le CSS vient se rajouter à la structure HTML et permet d'en modifier le visuel: taille, couleur, police et une multitude d'autres effets. Le PHP, quant à lui, est plutôt un langage de programmation dit « côté serveur », il n'est donc pas utilisé pour le design.</p>
+</div>
+
+<div class="badges">
+    <img src="./images/badge-web-color%20(1).svg" alt="Web couleur">
+    <img src="./images/badge-wad-bn.svg" alt="Wad gris">
+    <img src="./images/badge-game-bn.svg" alt="Game gris">
+</div>
+
+<h3 id="q">Avec quel langage peut-on modifier le design (couleurs, couleur de fond, …) d’un site web ?</h3>
+<div id="grosDiv">
+
+
+    <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+
+    <div class='popup-overlay'>
+        <div class="popup-content">
+            <h2>Indice</h2>
+            <p>Cascading Style Sheets...</p>
+            <button class="close bouton-pop">Fermer</button>
         </div>
-        
-       
+    </div>
 
-            <h3 id="q">Avec quel langage peut-on modifier le design (couleurs, couleur de fond, …) d’un site web ?</h3>
-            <div id="grosDiv">
-           
-               
-              <img id="adaImg" src="./images/ada-neutre.svg" alt="">
-              
-              <div class='popup-overlay'>
-                  <div class="popup-content">
-                      <h2>Indice</h2>
-                      <p>Cascading Style Sheets...</p>
-                      <button class="close bouton-pop">Fermer</button>
-                  </div>
-              </div>
-              
-               <button class="aide bouton-pop">Indice</button>
-               
-               
-                
-            
-        <div class="multichoix" id="multigreen">
-            <a>
-                <span id="a" class="letter">CSS</span>
-                <!--<span><p>London</p></span>-->
-            </a>
-        
-        
-            <a>
-                <span id="b" class="letter">PHP</span>
-                <!--<span><p>Paris</p></span>-->
-            </a>
-        
-        
-            <a>
-                <span id="c" class="letter">HTML</span>
-                <!--<span><p>Athens</p></span>-->
-            </a>
-        
-        
-            
-        </div>
-        </div>
-
-        <div id="resultat" class="resultat"></div>
+    <button class="aide bouton-pop">Indice</button>
 
 
 
-        <script>
-            
-            $('.aide').on('click', function(){
-                $('.popup-overlay, popup-content').addClass('active');
-                
+
+    <div class="multichoix" id="multigreen">
+        <a>
+            <span id="a" class="letter">CSS</span>
+            <!--<span><p>London</p></span>-->
+        </a>
+
+
+        <a>
+            <span id="b" class="letter">PHP</span>
+            <!--<span><p>Paris</p></span>-->
+        </a>
+
+
+        <a>
+            <span id="c" class="letter">HTML</span>
+            <!--<span><p>Athens</p></span>-->
+        </a>
+
+
+
+    </div>
+</div>
+
+<div id="resultat" class="resultat"></div>
+
+
+
+<script>
+
+    $('.aide').on('click', function(){
+        $('.popup-overlay, popup-content').addClass('active');
+
+    });
+
+    $('.close, .popup-overlay').on ('click', function(){
+        $('.popup-overlay, .popup-content').removeClass('active');
+    });
+
+    function isCorrect() {
+        $('.resultat').css("border", "1px solid #2ecc71");
+        $('.resultat').css("padding", "10px");
+        $('.resultat').css("margin-bottom", "50px");
+        $('.resultat').css("color", "#fff");
+        $('#adaImg').attr('src','./images/ada-contente.svg');        
+        resultat.innerHTML = "Bien joué! La réponse est correcte!";
+    }
+
+    function isWrong() {
+        $('.resultat').css("border", "1px solid #d91e50");
+        $('.resultat').css("padding", "10px");
+        $('.resultat').css("margin-bottom", "50px");
+        $('.resultat').css("color", "#fff");
+        $('#adaImg').attr('src','./images/ada-triste.svg');  
+        resultat.innerHTML = "Dommage ... la bonne réponse est CSS";
+
+    }
+
+    function answer(item, bool) {
+        if (bool === "true") {
+            $(item).click(function() {
+                isCorrect();
             });
-            
-            $('.close, .popup-overlay').on ('click', function(){
-                $('.popup-overlay, .popup-content').removeClass('active');
+
+        } else if (bool === "false") {
+            $(item).click(function() {
+                isWrong();
             });
+        }
+    }
 
-            function isCorrect() {
-                $('.resultat').css("border", "1px solid #2ecc71");
-                $('.resultat').css("padding", "10px");
-                $('.resultat').css("margin-bottom", "50px");
-                $('.resultat').css("color", "#fff");
-                $('#adaImg').attr('src','./images/ada-contente.svg');        
-                resultat.innerHTML = "Bien joué! La réponse est correcte!";
-            }
+    answer("#a", "true")
+    answer("#b", "false")
+    answer("#c", "false")
+    answer("#d", "false")
+</script>
 
-            function isWrong() {
-                $('.resultat').css("border", "1px solid #d91e50");
-                $('.resultat').css("padding", "10px");
-                $('.resultat').css("margin-bottom", "50px");
-                $('.resultat').css("color", "#fff");
-                $('#adaImg').attr('src','./images/ada-triste.svg');  
-                resultat.innerHTML = "Dommage ... la bonne réponse est CSS";
 
-            }
-
-            function answer(item, bool) {
-                if (bool === "true") {
-                    $(item).click(function() {
-                        isCorrect();
-                    });
-
-                } else if (bool === "false") {
-                    $(item).click(function() {
-                        isWrong();
-                    });
-                }
-            }
-
-            answer("#a", "true")
-            answer("#b", "false")
-            answer("#c", "false")
-            answer("#d", "false")
-        </script>
-        
-        
 
 
 

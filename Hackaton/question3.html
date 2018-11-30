@@ -1,126 +1,132 @@
 <style>
 
- .popup-overlay{
+    .popup-overlay{
 
-  visibility:hidden;
-  position:absolute;
-  background:#ffffff;
-  border:3px solid #666666;
-  width:50%;
-  height:50%;
-  left:25%; 
-}
-.popup-overlay.active{
+        visibility:hidden;
+        position:absolute;
+        background:#ffffff;
+        border:3px solid #666666;
+        width:50%;
+        height:50%;
+        left:25%; 
+    }
+    .popup-overlay.active{
 
-  visibility:visible;
-  text-align:center;
-    color: black;
-}
+        visibility:visible;
+        text-align:center;
+        color: black;
+    }
 
-.popup-content {
+    .popup-content {
 
- visibility:hidden;
-}
+        visibility:hidden;
+    }
 
-.popup-content.active {
+    .popup-content.active {
 
-  visibility:visible;
-}
+        visibility:visible;
+    }
 
-.bouton-pop{
-  display:inline-block;
-  vertical-align:middle;
-  border-radius:30px;
-  margin:.20rem;
-  font-size: 1rem;
-  color:#666666;
-  background:	#ffffff;
-  border:1px solid #666666;  
-}
+    .bouton-pop{
+        display:inline-block;
+        vertical-align:middle;
+        border-radius:30px;
+        margin:.20rem;
+        font-size: 1rem;
+        color:#666666;
+        background:	#ffffff;
+        border:1px solid #666666;  
+    }
 
-.bouton-pop:hover{
-  border:1px solid #666666;
-  background:#666666;
-  color:#ffffff;
-}
-    
+    .bouton-pop:hover{
+        border:1px solid #666666;
+        background:#666666;
+        color:#ffffff;
+    }
+
 </style>
-       
-        <script type="text/javascript">
-            
-            $('.aide').on('click', function(){
-                $('.popup-overlay, popup-content').addClass('active');
-                
-            });
-            
-            $('.close, .popup-overlay').on ('click', function(){
-                $('.popup-overlay, .popup-content').removeClass('active');
-            });
-            var answers = "#";
 
-            function checkAnswers() {
-                userAnswers = document.myForm.quOne.value;
+<script type="text/javascript">
 
-                if(userAnswers == answers) {
-                    $('#monDiv').css("border", "1px solid #2ecc71");
-                    $('#adaImg').attr('src','./images/ada-contente.svg'); 
-                    $('#monDiv').html ("Bien joué! La réponse est correcte!");
-                    $('#monDiv').css("padding", "10px");
-                    $('#monDiv').css("margin-bottom", "50px");
-                    $('#monDiv').css("color", "#fff");
-                    
+    $('.aide').on('click', function(){
+        $('.popup-overlay, popup-content').addClass('active');
 
+    });
 
-                } 
-                else{
-                    $('#monDiv').css("border", "1px solid #d91e50");
-                    $('#monDiv').css("padding", "10px");
-                    $('#monDiv').css("margin-bottom", "50px");
-                    $('#monDiv').css("color", "#fff");
-                    $('#adaImg').attr('src','./images/ada-triste.svg'); 
-                    $('#monDiv').html  ("Dommage ... la bonne réponse est " + answers)
-                }
-            }
+    $('.close, .popup-overlay').on ('click', function(){
+        $('.popup-overlay, .popup-content').removeClass('active');
+    });
+    var answers = "#";
 
-        </script>
- 
+    function checkAnswers() {
+        userAnswers = document.myForm.quOne.value;
+
+        if(userAnswers == answers) {
+            $('#monDiv').css("border", "1px solid #2ecc71");
+            $('#adaImg').attr('src','./images/ada-contente.svg'); 
+            $('#monDiv').html ("Bien joué! La réponse est correcte!");
+            $('#monDiv').css("padding", "10px");
+            $('#monDiv').css("margin-bottom", "50px");
+            $('#monDiv').css("color", "#fff");
 
 
-        <div class="theorie">
-                <h4 class="h4green">Lien HTML et CSS</h4> 
-            <p>
-                Pour lier son code HTML avec son code CSS, il suffit de mettre un lien dans sa page HTML qui pointe vers la page de style. Pour savoir quel code de style s'applique à quel élément, nous utilisons des sélecteurs.
-                Les sélecteurs #id et .class nous permettent de cibler un élément en particulier. Nous devons écrire nos attributs id et class à l’intérieur de la balise ouvrante d’un élément HTML et leur attribuer un nom qui sera repris dans la feuille de style CSS.
-            </p>
+
+        } 
+        else{
+            $('#monDiv').css("border", "1px solid #d91e50");
+            $('#monDiv').css("padding", "10px");
+            $('#monDiv').css("margin-bottom", "50px");
+            $('#monDiv').css("color", "#fff");
+            $('#adaImg').attr('src','./images/ada-triste.svg'); 
+            $('#monDiv').html  ("Dommage ... la bonne réponse est " + answers)
+        }
+    }
+
+</script>
+
+
+
+<div class="theorie">
+    <h4 class="h4green">Lien HTML et CSS</h4> 
+    <p>
+        Pour lier son code HTML avec son code CSS, il suffit de mettre un lien dans sa page HTML qui pointe vers la page de style. Pour savoir quel code de style s'applique à quel élément, nous utilisons des sélecteurs.
+        Les sélecteurs #id et .class nous permettent de cibler un élément en particulier. Nous devons écrire nos attributs id et class à l’intérieur de la balise ouvrante d’un élément HTML et leur attribuer un nom qui sera repris dans la feuille de style CSS.
+    </p>
+</div>
+
+<div class="badges">
+    <img src="./images/badge-web-color%20(1).svg" alt="Web couleur">
+    <img src="./images/badge-wad-bn.svg" alt="Wad gris">
+    <img src="./images/badge-game-bn.svg" alt="Game gris">
+</div>
+
+<h3 id="q">Sur base du code html suivant, tape le symbole adéquat dans le code css. </h3>
+<div id="grosDiv">
+
+
+    <img id="adaImg" src="./images/ada-neutre.svg" alt="">
+    <div class='popup-overlay'>
+        <div class="popup-content">
+            <h2>Indice</h2>
+            <p>ID = #
+                Class = .</p>
+            <button class="close bouton-pop">Fermer</button>
         </div>
+    </div>
 
-        <h3 id="q">Sur base du code html suivant, tape le symbole adéquat dans le code css. </h3>
-        <div id="grosDiv">
-
-
-            <img id="adaImg" src="./images/ada-neutre.svg" alt="">
-            <div class='popup-overlay'>
-                  <div class="popup-content">
-                      <h2>Indice</h2>
-                      <p>ID = #
-                      Class = .</p>
-                      <button class="close bouton-pop">Fermer</button>
-                  </div>
-              </div>
-              
-               <button class="aide bouton-pop">Indice</button>
+    <button class="aide bouton-pop">Indice</button>
 
 
-            <form name="myForm">
-                Html :<br>
-                &lt;p id=«paragraphe » &gt; Je suis un paragraphe &lt;/p&gt;<br>
-                Css : <br>
-                <input id="q3" type="text" name="quOne">paragraphe {Color : red ;}
+    <form name="myForm">
+        Html :<br>
+        &lt;p id=«paragraphe » &gt; Je suis un paragraphe &lt;/p&gt;<br>
+        Css : <br>
+        <input id="q3" type="text" name="quOne">paragraphe {Color : red ;}
 
 
-                <button id="btnq3" type="button" onclick="checkAnswers()">Valider</button>
-            </form>
-        </div>
+        <button id="btnq3" type="button" onclick="checkAnswers()">Valider</button>
+    </form>
+</div>
 
-        <div id="monDiv"></div>
+<div id="monDiv"></div>
 
