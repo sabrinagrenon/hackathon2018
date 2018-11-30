@@ -1,55 +1,3 @@
-<style>
-
- .popup-overlay{
-
-  visibility:hidden;
-  position:absolute;
-  background:#ffffff;
-  border:3px solid #666666;
-  width:50%;
-  height:50%;
-  left:25%; 
-}
-.popup-overlay.active{
-
-  visibility:visible;
-  text-align:center;
-    color: black;
-}
-
-.popup-content {
-
- visibility:hidden;
-}
-
-.popup-content.active {
-
-  visibility:visible;
-}
-
-.bouton-pop{
-  display:inline-block;
-  vertical-align:middle;
-  border-radius:30px;
-  margin:.20rem;
-  font-size: 1rem;
-  color:#666666;
-  background:	#ffffff;
-  border:1px solid #666666;  
-}
-
-.bouton-pop:hover{
-  border:1px solid #666666;
-  background:#666666;
-  color:#ffffff;
-}
-    
-</style>
-
-
-
-
-
 
 
 <div class="theorie">
@@ -65,19 +13,19 @@
 
 <h3 id="q">Quel est le jeu le plus ancien parmi la liste ci-dessous ?</h3>
 <div id="grosDiv">
+<div class='popup-overlay'>
+        <div class="popup-content">
+            
+            <p>J'ai parlé d'une petite balle?</p>
+            
+        </div>
+    </div>
+
+    <button class="aide bouton-pop"><i class="fas fa-lightbulb"></i></button>
 
 
     <img id="adaImg" src="./images/ada-neutre.svg" alt="">
-    <div class='popup-overlay'>
-                  <div class="popup-content">
-                      <h2>Indice</h2>
-                      <p>J'ai parlé d'une petite balle?</p>
-                      <button class="close bouton-pop">Fermer</button>
-                  </div>
-              </div>
-              
-               <button class="aide bouton-pop">Indice</button>
-
+    
 
     <div class="multichoix" id="multiyellow">
         <a id="a">

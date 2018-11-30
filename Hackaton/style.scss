@@ -37,6 +37,7 @@ $titreFont: 'Oswald';
 * { box-sizing: border-box;
     background-color: $greyColor;
     @extend %font;
+    outline: 0;
     /*scroll-behavior: smooth;*/
 }
 header{
@@ -50,6 +51,8 @@ header{
 
 body {
     section {
+        display: flex;
+        flex-direction: column;
         @extend %section;
     }
 }
@@ -132,7 +135,8 @@ h3 {
     width: 100px;
     height: 40px;
     visibility: visible;
-    align-items: flex-end;
+    align-self: flex-end;
+    cursor: pointer;
     
     
 }
@@ -145,7 +149,7 @@ h3 {
     width: 150px;
     height: 40px;
     visibility: hidden;
-    align-items: flex-end;
+    align-self: flex-end;
 }
 
 .theorie{
@@ -222,7 +226,7 @@ h3 {
         width: 50px;
         margin-right: 10px;
     }
-    button{
+    #btnq3, #btnq4, #btnq9{
         border:1px solid #fff;
         width: 60px;
         padding: 5px;
@@ -366,6 +370,7 @@ h3 {
             height: 150px;
             border: 1px solid $greenColor;
             margin: 10px;
+            margin-bottom: 30px;
             //text-align: center;
             display: flex;
             justify-content: center;
@@ -380,8 +385,8 @@ h3 {
     div{
     width: 150px;
             height: 150px;
-            
             margin: 10px;
+            margin-bottom: 30px;
             //text-align: center;
             display: flex;
             justify-content: center;
@@ -449,4 +454,73 @@ h3 {
     background-color: #E0BD10;
     transition: all .8s;
 }
+
+
+//INDICE POP UP
+
+
+
+
+    .popup-overlay{
+
+        visibility:hidden;
+        position:absolute;
+        background:transparent;
+        //border:1px solid #fff;
+        width:30%;
+        height:40%;
+        left:5%; 
+        /*bottom:-80%;*/
+        
+    }
+    .popup-overlay.active{
+
+        visibility:visible;
+        text-align:center;
+        //color: black;
+    }
+
+    .popup-content {
+        background-color: transparent;
+        h5{
+        background-color: transparent;
+
+        }
+         p{
+        background-color: transparent;
+        z-index: 99999;  
+        color: #fff;
+        
+        }
+
+        //visibility:hidden;
+    }
+
+    .popup-content.active {
+      
+
+        visibility:visible;
+    }
+
+    .bouton-pop{
+        display:inline-block;
+        vertical-align:middle;
+        margin:.20rem;
+        font-size: 30px;
+        border: none;
+        
+        //color:#666666;
+        //background:	#ffffff;
+        //border:1px solid #666666;  
+    }
+    
+
+    .bouton-pop:hover{
+        //border:1px solid #666666;
+        //background:#666666;
+        //color:#ffffff;
+        font-size: 40px;
+    }
+
+
 

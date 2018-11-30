@@ -23,6 +23,7 @@ body section {
 * {
   box-sizing: border-box;
   background-color: #0D0D0D;
+  outline: 0;
   /*scroll-behavior: smooth;*/ }
 
 header img {
@@ -30,6 +31,10 @@ header img {
   height: auto;
   padding: 20px;
   z-index: 100; }
+
+body section {
+  display: flex;
+  flex-direction: column; }
 
 #intro {
   width: auto;
@@ -84,7 +89,8 @@ h3 {
   width: 100px;
   height: 40px;
   visibility: visible;
-  align-items: flex-end; }
+  align-self: flex-end;
+  cursor: pointer; }
 
 #fin {
   border: 1px solid #fff;
@@ -92,7 +98,7 @@ h3 {
   width: 150px;
   height: 40px;
   visibility: hidden;
-  align-items: flex-end; }
+  align-self: flex-end; }
   #fin a {
     text-decoration: none; }
 
@@ -145,7 +151,7 @@ h3 {
     border-bottom: 2px dashed #06FF61;
     width: 50px;
     margin-right: 10px; }
-  #grosDiv button {
+  #grosDiv #btnq3, #grosDiv #btnq4, #grosDiv #btnq9 {
     border: 1px solid #fff;
     width: 60px;
     padding: 5px;
@@ -252,6 +258,7 @@ h3 {
   height: 150px;
   border: 1px solid #06FF61;
   margin: 10px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -266,6 +273,7 @@ h3 {
     width: 150px;
     height: 150px;
     margin: 10px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,3 +336,38 @@ h3 {
 .progressbar li.yellow:after {
   background-color: #E0BD10;
   transition: all .8s; }
+
+.popup-overlay {
+  visibility: hidden;
+  position: absolute;
+  background: transparent;
+  width: 30%;
+  height: 40%;
+  left: 5%;
+  /*bottom:-80%;*/ }
+
+.popup-overlay.active {
+  visibility: visible;
+  text-align: center; }
+
+.popup-content {
+  background-color: transparent; }
+  .popup-content h5 {
+    background-color: transparent; }
+  .popup-content p {
+    background-color: transparent;
+    z-index: 99999;
+    color: #fff; }
+
+.popup-content.active {
+  visibility: visible; }
+
+.bouton-pop {
+  display: inline-block;
+  vertical-align: middle;
+  margin: .20rem;
+  font-size: 30px;
+  border: none; }
+
+.bouton-pop:hover {
+  font-size: 40px; }
