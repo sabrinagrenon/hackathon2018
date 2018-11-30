@@ -89,15 +89,33 @@ h3 {
     width: 70%;
     height: auto; }
   #grosDiv form {
-    display: flex;
-    flex-direction: column; }
+    font-size: 20px;
+    line-height: 2; }
+    #grosDiv form #inputq4 {
+      border-bottom: 2px dashed #A203FE;
+      margin-left: 10px; }
+    #grosDiv form #inputq9 {
+      border-bottom: 2px dashed #E0BD10;
+      margin-left: 10px; }
+    #grosDiv form #btnq3:hover {
+      color: #06FF61;
+      border-color: #06FF61; }
+    #grosDiv form #btnq4:hover {
+      color: #A203FE;
+      border-color: #A203FE; }
+    #grosDiv form #btnq9:hover {
+      color: #E0BD10;
+      border-color: #E0BD10; }
   #grosDiv input {
     border: none;
-    border-bottom: 1px solid #fff; }
+    border-bottom: 2px dashed #06FF61;
+    width: 50px;
+    margin-right: 10px; }
   #grosDiv button {
     border: 1px solid #fff;
     width: 60px;
-    padding: 5px; }
+    padding: 5px;
+    margin-left: 10px; }
 
 #multichoix {
   display: flex;

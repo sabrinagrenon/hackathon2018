@@ -137,20 +137,50 @@ h3 {
         height: auto;
     }
     form{
-        display: flex;
-        flex-direction: column;
-        #q3{
-            width: 10px;
+        font-size: 20px;
+        line-height: 2;
+        #inputq4{
+            border-bottom: 2px dashed $mauveColor;
+            margin-left: 10px;
         }
+        #inputq9{
+            border-bottom: 2px dashed $yellowColor;
+            margin-left: 10px;
+        }
+        #btnq3:hover {
+            
+            color: $greenColor;
+            border-color: $greenColor;
+            
+        }
+        
+        #btnq4:hover {
+            
+            color: $mauveColor;
+            border-color: $mauveColor;
+            
+        }
+        #btnq9:hover {
+            
+            color: $yellowColor;
+            border-color: $yellowColor;
+            
+        }
+        
+        
+     
     }
     input{
         border: none;
-        border-bottom: 1px solid #fff;
+        border-bottom: 2px dashed $greenColor;
+        width: 50px;
+        margin-right: 10px;
     }
     button{
         border:1px solid #fff;
         width: 60px;
         padding: 5px;
+        margin-left: 10px;
     }
 }
 // exercice 1
