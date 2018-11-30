@@ -57,9 +57,21 @@ header img {
         color: #fff;
         font-size: 50px; }
 
+.badges {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*    margin-left: 100px;
+      margin-right: 100px;*/
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .badges img {
+    width: 7%; }
+
 h3 {
   font-weight: 400;
-  font-size: 30px; }
+  font-size: 25px;
+  text-align: center; }
 
 /*
 .question{
@@ -70,7 +82,8 @@ h3 {
   border: 1px solid #fff;
   font-size: 20px;
   width: 100px;
-  height: 40px; }
+  height: 40px;
+  align-self: flex-start; }
 
 .theorie {
   border-bottom: 1px solid #fff;
@@ -208,7 +221,8 @@ h3 {
   background-color: #06FF61;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 10px; }
   .draggable span {
     background-color: transparent;
     text-align: center; }
@@ -216,7 +230,8 @@ h3 {
 #droppables {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
 
 #droppables > div {
   width: 150px;
