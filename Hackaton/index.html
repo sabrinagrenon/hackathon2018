@@ -126,6 +126,8 @@
 
             </div>
             <button id="next" >Next</button>
+            <button id="fin"><a href="./fin.html">Fin du Quizz</a></button>
+            
             <script>
                 $(document).ready(function(){
                     let indice = 1;
@@ -145,6 +147,7 @@
 
                     var compteur = 1;
                     var color = "green";
+                    
                     var progressBar = {
                         Bar : $('#progress-bar'),
                         Reset : function(){
@@ -160,6 +163,11 @@
                             }
                             if(compteur > 5){
                                 color = 'yellow';
+                            }
+                            
+                            if (compteur == 8){
+                                $('#next').css('visibility', 'hidden');
+                                $('#fin').css('visibility', 'visible');
                             }
 
                             $('#progress-bar li:not(.active):first').addClass("active").addClass(color);
