@@ -137,7 +137,15 @@ h3 {
     
 }
 #fin{
+    a{
+        text-decoration: none;
+    }
+    border: 1px solid #fff;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
     visibility: hidden;
+    align-items: flex-end;
 }
 
 .theorie{
@@ -341,7 +349,9 @@ h3 {
                 text-align: center;
             }
         }
-
+.dragyellow{
+    background-color:$yellowColor ;
+}
 #droppables{
     display: flex;
     justify-content: center;
@@ -360,6 +370,24 @@ h3 {
             display: flex;
             justify-content: center;
             align-items: center;
+}
+#droppablesyel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    border-color:$yellowColor;
+    div{
+    width: 150px;
+            height: 150px;
+            
+            margin: 10px;
+            //text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    border: 1px solid $yellowColor;
+    }
 }
 
 

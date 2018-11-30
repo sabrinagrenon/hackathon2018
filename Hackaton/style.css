@@ -87,7 +87,14 @@ h3 {
   align-items: flex-end; }
 
 #fin {
-  visibility: hidden; }
+  border: 1px solid #fff;
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  visibility: hidden;
+  align-items: flex-end; }
+  #fin a {
+    text-decoration: none; }
 
 .theorie {
   border-bottom: 1px solid #fff;
@@ -231,6 +238,9 @@ h3 {
     background-color: transparent;
     text-align: center; }
 
+.dragyellow {
+  background-color: #E0BD10; }
+
 #droppables {
   display: flex;
   justify-content: center;
@@ -245,6 +255,21 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+#droppablesyel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-color: #E0BD10; }
+  #droppablesyel div {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E0BD10; }
 
 /*Bar de progression*/
 .progressbar li {
