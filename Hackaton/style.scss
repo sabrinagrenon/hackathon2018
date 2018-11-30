@@ -81,6 +81,9 @@ body {
     h2 {
         font-size: 40px;
         font-weight: 300;
+        margin-bottom: 0;
+        margin-top: 0;
+        
     }
     div {
         
@@ -180,7 +183,8 @@ h3 {
     
     #adaImg {
         width: 20%;
-        margin-right: 20%;
+        //margin-right: 15%;
+       
     }
     #drag {
         width: 70%;
